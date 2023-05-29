@@ -7,7 +7,7 @@ images {
   sprite_trim_mode: SPRITE_TRIM_MODE_OFF
 }
 images {
-  image: "/Images/Background/fond.png"
+  image: "/Images/Background/fond.jpg"
   sprite_trim_mode: SPRITE_TRIM_MODE_OFF
 }
 animations {
@@ -24,7 +24,7 @@ animations {
     image: "/Images/Explosion.png"
     sprite_trim_mode: SPRITE_TRIM_MODE_OFF
   }
-  playback: PLAYBACK_LOOP_FORWARD
+  playback: PLAYBACK_ONCE_FORWARD
   fps: 6
   flip_horizontal: 0
   flip_vertical: 0

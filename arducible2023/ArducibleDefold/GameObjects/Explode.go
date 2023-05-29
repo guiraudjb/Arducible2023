@@ -1,5 +1,5 @@
 embedded_components {
-  id: "sprite"
+  id: "explod"
   type: "sprite"
   data: "tile_set: \"/GameAtlas/GameSprites.atlas\"\n"
   "default_animation: \"explosion\"\n"

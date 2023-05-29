@@ -7,8 +7,8 @@ embedded_components {
   "blend_mode: BLEND_MODE_ALPHA\n"
   ""
   position {
-    x: 640.0
-    y: 426.5
+    x: 960.0
+    y: 540.0
     z: 0.0
   }
   rotation {

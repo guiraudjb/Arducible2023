@@ -1,0 +1,96 @@
+function init(self)
+	-- tell the current game object (".") to acquire input focus
+	msg.post(".", "acquire_input_focus")
+end
+
+function final(self)
+	-- Add finalization code here
+	-- Learn more: https://defold.com/manuals/script/
+	-- Remove this function if not needed
+end
+
+function update(self, dt)
+	-- Add update code here
+	-- Learn more: https://defold.com/manuals/script/
+	-- Remove this function if not needed
+end
+
+function fixed_update(self, dt)
+	-- This function is called if 'Fixed Update Frequency' is enabled in the Engine section of game.project
+	-- Can be coupled with fixed updates of the physics simulation if 'Use Fixed Timestep' is enabled in
+	-- Physics section of game.project
+	-- Add update code here
+	-- Learn more: https://defold.com/manuals/script/
+	-- Remove this function if not needed
+end
+
+function on_message(self, message_id, message, sender)
+	-- Add message-handling code here
+	-- Learn more: https://defold.com/manuals/message-passing/
+	-- Remove this function if not needed
+end
+
+function on_input(self, action_id, action)
+		if action_id == hash("hit1") then
+			if action.pressed then
+				print("touche e touchée")
+				self.cible1 = factory.create("#FactoryExplode",vmath.vector3(posXC1,posYC,1),nil,nil,2.0)
+
+				sound.play("/Sounds#hit1")
+			elseif action.released then
+				timer.delay(1, false, function() go.delete(self.cible1) end)
+
+					-- stop moving left
+			end
+		end
+
+
+		if action_id == hash("hit2") then
+			if action.pressed then
+				print("touche r touchée")
+				self.cible2 = factory.create("#FactoryExplode",vmath.vector3(posXC2,posYC,1),nil,nil,2.0)
+				sound.play("/Sounds#hit1")
+			elseif action.released then
+				-- stop moving left
+				timer.delay(1, false, function() go.delete(self.cible2) end)
+			end
+		end
+
+
+		if action_id == hash("hit3") then
+			if action.pressed then
+				print("touche t touchée")
+				self.cible3 = factory.create("#FactoryExplode",vmath.vector3(posXC3,posYC,1),nil,nil,2.0)
+				sound.play("/Sounds#hit1")
+				
+			elseif action.released then
+				timer.delay(1, false, function() go.delete(self.cible3) end)
+				-- stop moving left
+			end
+		end
+		if action_id == hash("mute") then
+			if action.pressed then
+				print("touche droite touchée")
+
+			elseif action.released then
+				-- stop moving left
+				if musique == true then
+					sound.stop("/Sounds#BackGroundMusic")
+					musique = false
+				pprint(musique)
+				else
+				sound.play("/Sounds#BackGroundMusic")
+				musique = true
+				pprint(musique)
+				end
+			end
+		end
+
+		
+end
+
+function on_reload(self)
+	-- Add reload-handling code here
+	-- Learn more: https://defold.com/manuals/hot-reload/
+	-- Remove this function if not needed
+end

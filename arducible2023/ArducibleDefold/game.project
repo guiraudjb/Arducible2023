@@ -5,9 +5,9 @@ main_collection = /main/InGame.collectionc
 shared_state = 1
 
 [display]
-width = 1280
-height = 852
-fullscreen = 1
+width = 1920
+height = 1080
+fullscreen = 0
 display_device_info = 1
 
 [android]
