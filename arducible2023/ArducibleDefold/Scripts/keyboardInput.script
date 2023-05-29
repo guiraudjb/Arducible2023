@@ -111,6 +111,13 @@ function temporisation(self)
 	print(ActiveKeyboard)
 end	
 function UpdateLevel(self)
-	PosInLevel=1
-	Level=Level+1
+	if Level < 2 then
+		PosInLevel=1
+		Level=Level+1
+		print(Level)
+	else
+		Level=0
+		print(Level)
+		timer.delay(20, false, function() Level=1 end)
+	end
 end
