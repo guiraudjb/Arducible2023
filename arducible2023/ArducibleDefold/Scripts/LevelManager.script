@@ -1,18 +1,24 @@
 function init(self)
-	-- Add initialization code here
-	-- Learn more: https://defold.com/manuals/script/
-	-- Remove this function if not needed
 	posXC1=384
 	posXC2=960
 	posXC3=1536
 	posYC=200
-	musique = true
-	sound.play("/Sounds#BackGroundMusic")
+	Level=1
 	
-	self.cible1 = factory.create("#FactoryTarget",vmath.vector3(posXC1,posYC,1),nil,nil,2.0)
-	self.cible2 = factory.create("#FactoryTarget",vmath.vector3(posXC2,posYC,1),nil,nil,2.0)
-	self.cible3 = factory.create("#FactoryTarget",vmath.vector3(posXC3,posYC,1),nil,nil,2.0)
-	--self.my_created_object = factory.create("#FactoryTarget", nil, nil, {my_value = 1}, 2.0) -- '2.0' is the new scale
+	GameTime = 60
+	PlayerScore=0
+	FinalScore=0
+	
+	functions_getLevelParameters(2)
+	print(levelTargets[1])
+	PosInLevel=1
+	--ActiveTarget=1
+	--ActiveBonus=1
+	-- run background Music
+	self.musique = true
+
+	--sound.play("/Sounds#BackGroundMusic")
+	Draw_Target(self)
 end
 
 function final(self)
@@ -22,40 +28,47 @@ function final(self)
 end
 
 function update(self, dt)
-	-- Add update code here
-	-- Learn more: https://defold.com/manuals/script/
-	-- Remove this function if not needed
+	go.delete(self.cible1)
+	go.delete(self.cible2)
+	go.delete(self.cible3)
+	Draw_Target(self)
 end
 
-function fixed_update(self, dt)
-	-- This function is called if 'Fixed Update Frequency' is enabled in the Engine section of game.project
-	-- Can be coupled with fixed updates of the physics simulation if 'Use Fixed Timestep' is enabled in
-	-- Physics section of game.project
-	-- Add update code here
-	-- Learn more: https://defold.com/manuals/script/
-	-- Remove this function if not needed
+
+function Draw_Target(self)
+	ActiveTarget=levelTargets[PosInLevel]
+	ActiveBonus=levelTimeExtenderPositions[PosInLevel]
+	--pprint(ActiveTarget)
+	--pprint(ActiveBonus)
+	
+	if ActiveTarget == 1 then
+	
+	self.cible1 = factory.create("#FactoryActiveTarget",vmath.vector3(posXC1,posYC,1),nil,nil,2.0)
+	else
+		self.cible1 = factory.create("#FactoryTarget",vmath.vector3(posXC1,posYC,1),nil,nil,2.0)
+	end
+
+	if ActiveTarget == 2 then 
+		self.cible2 = factory.create("#FactoryActiveTarget",vmath.vector3(posXC2,posYC,1),nil,nil,2.0)
+	else
+		self.cible2 = factory.create("#FactoryTarget",vmath.vector3(posXC2,posYC,1),nil,nil,2.0)
+	end
+	if ActiveTarget == 3 then
+		self.cible3 = factory.create("#FactoryActiveTarget",vmath.vector3(posXC3,posYC,1),nil,nil,2.0)
+	else 
+		self.cible3 = factory.create("#FactoryTarget",vmath.vector3(posXC3,posYC,1),nil,nil,2.0)
+	end
+
 end
 
-function on_message(self, message_id, message, sender)
-	-- Add message-handling code here
-	-- Learn more: https://defold.com/manuals/message-passing/
-	-- Remove this function if not needed
-end
-
-function on_input(self, action_id, action)
-	-- Add input-handling code here. The game object this script is attached to
-	-- must have acquired input focus:
-	--
-	--    msg.post(".", "acquire_input_focus")
-	--
-	-- All mapped input bindings will be received. Mouse and touch input will
-	-- be received regardless of where on the screen it happened.
-	-- Learn more: https://defold.com/manuals/input/
-	-- Remove this function if not needed
-end
-
-function on_reload(self)
-	-- Add reload-handling code here
-	-- Learn more: https://defold.com/manuals/hot-reload/
-	-- Remove this function if not needed
+function functions_getLevelParameters(level)
+	if level == 1 then
+	levelTargets = {3,2,1}
+	levelTimeExtenderValues={4,0,0}
+	levelTimeExtenderPositions={2,0,0}
+	elseif level == 2 then
+	levelTargets = {2,3,1}
+	levelTimeExtenderValues={1,0,0}
+	levelTimeExtenderPositions={1,0,0}
+	end
 end
