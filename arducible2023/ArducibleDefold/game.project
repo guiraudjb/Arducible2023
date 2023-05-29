@@ -1,0 +1,18 @@
+[bootstrap]
+main_collection = /main/InGame.collectionc
+
+[script]
+shared_state = 1
+
+[display]
+width = 1280
+height = 852
+fullscreen = 1
+display_device_info = 1
+
+[android]
+input_method = HiddenInputField
+
+[project]
+title = ArducibleDefold
+
