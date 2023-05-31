@@ -29,7 +29,8 @@ function on_input(self, action_id, action)
 						UpdateLevel(self)
 					end
 				elseif ActiveBonus == 1 then
-					sound.play("/Sounds#hit3")
+					print("je réative afficher bonus") 
+					AfficherBonus=1
 				else
 					sound.play("/Sounds#hit2")
 				end
@@ -52,6 +53,8 @@ function on_input(self, action_id, action)
 					end
 				elseif ActiveBonus == 2 then
 					sound.play("/Sounds#hit3")
+					print("je réative afficher bonus") 
+					AfficherBonus=1
 				else
 					sound.play("/Sounds#hit2")
 				end
@@ -76,6 +79,8 @@ function on_input(self, action_id, action)
 					end
 				elseif ActiveBonus == 3 then
 					sound.play("/Sounds#hit3")
+					print("je réative afficher bonus") 
+					AfficherBonus=1
 				else
 					sound.play("/Sounds#hit2")
 				end
@@ -83,6 +88,9 @@ function on_input(self, action_id, action)
 				
 			end
 		end
+
+
+		
 		if action_id == hash("mute") then
 			if action.pressed then
 				print("touche droite touchée")

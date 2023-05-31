@@ -10,7 +10,7 @@ function init(self)
 	FinalScore=0
 	PosInLevel=1
 	ActiveTarget=0
-	
+	AfficherBonus=1
 	functions_getLevelParameters(Level)
 	Draw_Target(self)
 self.musique = true
@@ -24,7 +24,7 @@ function final(self)
 end
 
 function update(self, dt)
-	print("level", Level, ActiveTarget, ActiveBonus)
+	print("level :", Level,"active target :", ActiveTarget,"active Bonus", ActiveBonus,AfficherBonus)
 	ActiveTarget=0
 	ActiveBonus=0
 	functions_getLevelParameters(Level)
@@ -36,6 +36,7 @@ function update(self, dt)
 		go.delete(self.cible2)
 		go.delete(self.cible3)
 		Draw_Target(self)
+		Draw_Bonus(self)
 	end
 end
 
@@ -57,6 +58,27 @@ function Draw_Target(self)
 		self.cible3 = factory.create("#FactoryActiveTarget",vmath.vector3(posXC3,posYC,1),nil,nil,2.0)
 	else 
 		self.cible3 = factory.create("#FactoryTarget",vmath.vector3(posXC3,posYC,1),nil,nil,2.0)
+	end
+end
+end
+
+function Draw_Bonus(self)
+	if AfficherBonus == 1 then
+		AfficherBonus = 0
+	if Level > 0 then
+		if ActiveBonus == 1 then
+			self.bonus = factory.create("#FactoryExtend1",vmath.vector3(posXC1+200,posYC+200,1),nil,nil,1.0)
+			print("je suis dans la boucle")
+		else
+		end
+		if ActiveBonus == 2 then
+			self.bonus = factory.create("#FactoryExtend1",vmath.vector3(posXC2+110,posYC+120,1),nil,nil,1.0)
+		else
+		end
+		if ActiveBonus == 3 then
+			self.bonus = factory.create("#FactoryExtend1",vmath.vector3(posXC3+200,posYC+200,1),nil,nil,1.0)
+		else
+		end
 	end
 end
 end
