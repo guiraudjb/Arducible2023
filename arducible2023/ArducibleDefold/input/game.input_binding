@@ -12,7 +12,11 @@ key_trigger {
 }
 key_trigger {
   input: KEY_RIGHT
-  action: "mute"
+  action: "right"
+}
+key_trigger {
+  input: KEY_LEFT
+  action: "left"
 }
 mouse_trigger {
   input: MOUSE_BUTTON_1

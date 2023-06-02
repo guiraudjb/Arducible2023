@@ -1,0 +1,43 @@
+function init(self)
+	msg.post(".", "acquire_input_focus")
+end
+
+function on_input(self, action_id, action)
+	if ActiveKeyboard == true then
+	if action_id == hash("hit1") then
+		if action.pressed then
+		
+		elseif action.released then
+			ActiveKeyboard = false-- start moving left
+			sound.play("HitSound#HitSound1")
+			sprite.play_flipbook("#sprite", "explosion", function()
+			sprite.play_flipbook("#sprite", "boule")
+			ActiveKeyboard = true
+		end)	-- stop moving left
+		end
+	end		
+		
+		
+	end
+end
+function on_reload(self)
+	-- Add reload-handling code here
+	-- Learn more: https://defold.com/manuals/hot-reload/
+	-- Remove this function if not needed
+end
+function update(self, dt)
+
+end
+
+function fixed_update(self, dt)
+	print(cibleEnCour)
+	--if cibleEnCour==1 then
+	--	sprite.play_flipbook("#sprite", "TargetTohit")
+	--end
+end
+
+function on_message(self, message_id, message, sender)
+	--if message_id == hash("c1") then
+	--	sound.play("HitSound#HitSound1")
+	--end
+end

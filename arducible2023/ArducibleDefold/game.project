@@ -1,5 +1,5 @@
 [bootstrap]
-main_collection = /main/testmessaging.collectionc
+main_collection = /main/level.collectionc
 render = /builtins/render/default.renderc
 
 [script]

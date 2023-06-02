@@ -1,4 +1,4 @@
-font: "/fonts/ARCADE_I.TTF"
+font: "/assets/fonts/ARCADE_I.TTF"
 material: "/builtins/fonts/font.material"
 size: 15
 antialias: 1
