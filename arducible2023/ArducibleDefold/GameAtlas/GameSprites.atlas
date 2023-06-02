@@ -48,6 +48,33 @@ animations {
   flip_horizontal: 0
   flip_vertical: 0
 }
+animations {
+  id: "TargetTohit"
+  images {
+    image: "/Images/BouleG.png"
+    sprite_trim_mode: SPRITE_TRIM_MODE_OFF
+  }
+  images {
+    image: "/Images/Explosion.png"
+    sprite_trim_mode: SPRITE_TRIM_MODE_OFF
+  }
+  images {
+    image: "/Images/BouleR.png"
+    sprite_trim_mode: SPRITE_TRIM_MODE_OFF
+  }
+  images {
+    image: "/Images/Explosion.png"
+    sprite_trim_mode: SPRITE_TRIM_MODE_OFF
+  }
+  images {
+    image: "/Images/BouleG.png"
+    sprite_trim_mode: SPRITE_TRIM_MODE_OFF
+  }
+  playback: PLAYBACK_ONCE_FORWARD
+  fps: 6
+  flip_horizontal: 0
+  flip_vertical: 0
+}
 margin: 0
 extrude_borders: 3
 inner_padding: 0

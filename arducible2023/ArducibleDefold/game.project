@@ -1,12 +1,13 @@
 [bootstrap]
-main_collection = /main/InGame.collectionc
+main_collection = /main/testmessaging.collectionc
+render = /builtins/render/default.renderc
 
 [script]
 shared_state = 1
 
 [display]
-width = 1920
-height = 1080
+width = 800
+height = 600
 fullscreen = 0
 display_device_info = 1
 
