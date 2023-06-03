@@ -1,5 +1,0 @@
-function on_message(self, message_id, message, sender)
-	if message_id == hash("trigger_response") and message.enter then
-		go.delete()
-	end
-end
