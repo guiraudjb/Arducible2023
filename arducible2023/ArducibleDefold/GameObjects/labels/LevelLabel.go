@@ -2,8 +2,8 @@ embedded_components {
   id: "label"
   type: "label"
   data: "size {\n"
-  "  x: 128.0\n"
-  "  y: 48.0\n"
+  "  x: 410.0\n"
+  "  y: 64.0\n"
   "  z: 0.0\n"
   "  w: 0.0\n"
   "}\n"
@@ -30,13 +30,13 @@ embedded_components {
   "pivot: PIVOT_CENTER\n"
   "blend_mode: BLEND_MODE_ALPHA\n"
   "line_break: false\n"
-  "text: \"Level : \"\n"
+  "text: \"Level :\"\n"
   "font: \"/GameObjects/labels/ArcadeFont.font\"\n"
   "material: \"/builtins/fonts/label.material\"\n"
   ""
   position {
-    x: 64.0
-    y: 24.0
+    x: 205.0
+    y: 32.0
     z: 0.0
   }
   rotation {

@@ -7,7 +7,15 @@ images {
   sprite_trim_mode: SPRITE_TRIM_MODE_OFF
 }
 images {
-  image: "/assets/Images/Background/fond.jpg"
+  image: "/assets/Images/Background/1.jpg"
+  sprite_trim_mode: SPRITE_TRIM_MODE_OFF
+}
+images {
+  image: "/assets/Images/Background/2.jpg"
+  sprite_trim_mode: SPRITE_TRIM_MODE_OFF
+}
+images {
+  image: "/assets/Images/Background/3.jpg"
   sprite_trim_mode: SPRITE_TRIM_MODE_OFF
 }
 animations {

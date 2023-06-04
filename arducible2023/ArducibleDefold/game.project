@@ -6,8 +6,8 @@ render = /builtins/render/default.renderc
 shared_state = 1
 
 [display]
-width = 800
-height = 600
+width = 1920
+height = 1080
 fullscreen = 0
 display_device_info = 1
 
@@ -16,4 +16,7 @@ input_method = HiddenInputField
 
 [project]
 title = ArducibleDefold
+
+[engine]
+fixed_update_frequency = 30
 
