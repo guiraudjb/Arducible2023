@@ -1,5 +1,5 @@
 [bootstrap]
-main_collection = /main/level.collectionc
+main_collection = /main/main.collectionc
 render = /builtins/render/default.renderc
 
 [script]
@@ -10,6 +10,7 @@ width = 1920
 height = 1080
 fullscreen = 0
 display_device_info = 1
+vsync = 1
 
 [android]
 input_method = HiddenInputField
@@ -19,4 +20,7 @@ title = ArducibleDefold
 
 [engine]
 fixed_update_frequency = 30
+
+[html5]
+splash_image = 
 
