@@ -1,7 +1,7 @@
 embedded_components {
   id: "music"
   type: "sound"
-  data: "sound: \"/assets/Sounds/musique.wav\"\n"
+  data: "sound: \"/assets/Sounds/musique.ogg\"\n"
   "looping: 1\n"
   "group: \"master\"\n"
   "gain: 0.5\n"
