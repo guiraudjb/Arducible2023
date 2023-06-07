@@ -2,6 +2,7 @@ function init(self)
 	-- Add initialization code here
 	-- Learn more: https://defold.com/manuals/script/
 	-- Remove this function if not needed
+	self.timeLeft=10
 end
 
 function final(self)
@@ -11,9 +12,12 @@ function final(self)
 end
 
 function update(self, dt)
-	-- Add update code here
-	-- Learn more: https://defold.com/manuals/script/
-	-- Remove this function if not needed
+	if self.timeLeft > 0 then
+		self.timeLeft = math.max(self.timeLeft - dt, 0)
+		label.set_text("readyToGo#label", string.format("%.0f", tostring(self.timeLeft)))
+	else
+		msg.post("main:/loader#main", "changeScene", { newScene = "sceneInfo" })
+	end
 end
 
 function fixed_update(self, dt)

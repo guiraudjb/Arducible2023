@@ -18,7 +18,13 @@ function on_input(self, action_id, action)
 					then posInLevel = posInLevel + 1
 					else
 						posInLevel = 1
-						level = level +1
+						if level < 3 then
+							level = level +1
+						else
+							finalScore = score
+							score=0
+							msg.post("main:/loader#main", "changeScene", { newScene = "sceneEnding" })
+						end
 					end
 				else
 					sound.play("HitSound#HitSound2")
