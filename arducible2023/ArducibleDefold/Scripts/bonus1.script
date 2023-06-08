@@ -1,23 +1,53 @@
 function init(self)
-	-- Add initialization code here
-	-- Learn more: https://defold.com/manuals/script/
-	-- Remove this function if not needed
-	self.timeLeft=3
+	msg.post(".", "acquire_input_focus")
+	animationPlaying=false
+
+	if ActiveBonusPos == 1 then
+	playanimation(ActiveBonusValue)
+	end
 end
 
 function final(self)
-	-- Add finalization code here
-	-- Learn more: https://defold.com/manuals/script/
-	-- Remove this function if not needed
 end
 
 function update(self, dt)
-	if self.timeLeft > 0 then
-		self.timeLeft = math.max(self.timeLeft - dt, 0)
-		label.set_text("readyToGo#label", string.format("%.0f", tostring(self.timeLeft)))
-	else
-		msg.post("main:/loader#main", "changeScene", { newScene = "sceneGame" })
+	print("active bonus pos"..ActiveBonusPos)
+	print("active bonus value"..ActiveBonusValue)
+	if ActiveBonusPos == 1 then
+		playanimation(ActiveBonusValue)
+	else 
+		if animationPlaying==true then
+		sprite.play_flipbook("#sprite", "blank")
+		animationPlaying = false
 	end
+end
+end
+
+function playanimation(type)
+	print(type)
+	print(ActiveBonusPos)
+	if animationPlaying==false then
+		if type == 1 then
+			sprite.play_flipbook("#sprite", "Extending1Animation", function() end)
+		end
+		if type == 2 then
+			sprite.play_flipbook("#sprite", "Extending2Animation", function() end)
+		end
+		if type == 3 then
+			sprite.play_flipbook("#sprite", "Extending3Animation", function() end)
+		end
+		if type == 4 then
+			sprite.play_flipbook("#sprite", "Extending4Animation", function() end)
+		end
+		animationPlaying = true
+	else
+
+	end	
+end
+
+function removebBonus()
+	sprite.play_flipbook("#sprite", "blank")
+	animationPlaying = false
 end
 
 function fixed_update(self, dt)

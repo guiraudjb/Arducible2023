@@ -1,6 +1,6 @@
 components {
-  id: "background"
-  component: "/Scripts/background.script"
+  id: "bonus1"
+  component: "/Scripts/bonus1.script"
   position {
     x: 0.0
     y: 0.0
@@ -16,14 +16,14 @@ components {
 embedded_components {
   id: "sprite"
   type: "sprite"
-  data: "tile_set: \"/assets/background.atlas\"\n"
-  "default_animation: \"1\"\n"
+  data: "tile_set: \"/assets/GameSprites.atlas\"\n"
+  "default_animation: \"blank\"\n"
   "material: \"/builtins/materials/sprite.material\"\n"
   "blend_mode: BLEND_MODE_ALPHA\n"
   ""
   position {
-    x: 960.0
-    y: 540.0
+    x: 0.0
+    y: 0.0
     z: 0.0
   }
   rotation {

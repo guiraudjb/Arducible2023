@@ -1,10 +1,6 @@
 function init(self)
 	msg.post(".", "acquire_input_focus")
 	self.timeLeft=60
-	
---	cibleEnCour=0
---	ActiveBonusPos=0
---	ActiveBonusValue=0
 	ActiveKeyboard=true
 	posInLevel =1
 	oldLevel=1
@@ -26,12 +22,13 @@ function update(self, dt)
 		label.set_text("LevelLabel#label", "Level : "..level )
 		getLevelParameters(level)
 		cibleEnCour=levelTargets[posInLevel]
-		ActiveBonusPos = levelTimeExtenderValues[posInLevel]
+		ActiveBonusPos = levelTimeExtenderPositions[posInLevel]
 		ActiveBonusValue = levelTimeExtenderValues[posInLevel]
+
 	else
 		msg.post("main:/loader#main", "changeScene", { newScene = "sceneEnding" })
 	end
-	
+
 	
 	--print("time left: "..self.timeLeft.." Level :"..level.." Position dans le niveau :"..posInLevel)
 end
@@ -80,3 +77,6 @@ if level == 3 then
 	levelTimeExtenderPositions={2,0,0}
 end
 end
+
+
+
