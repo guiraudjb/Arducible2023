@@ -1,6 +1,6 @@
 function init(self)
 	msg.post(".", "acquire_input_focus")
-	self.timeLeft=60
+	timeLeft=60
 	ActiveKeyboard=true
 	posInLevel =1
 	oldLevel=1
@@ -15,10 +15,10 @@ function final(self)
 end
 
 function update(self, dt)
-		if self.timeLeft > 0 then
-		self.timeLeft = math.max(self.timeLeft - dt, 0)
-		label.set_text("TimeLeftLabel#label", string.format("Time Left : %.1f", tostring(self.timeLeft)))
-		label.set_text("ScoreLabel#label", string.format("SCORE : %.1f", tostring(score+self.timeLeft)))
+		if timeLeft > 0 then
+		timeLeft = math.max(timeLeft - dt, 0)
+		label.set_text("TimeLeftLabel#label", string.format("Time Left : %.1f", tostring(timeLeft)))
+		label.set_text("ScoreLabel#label", string.format("SCORE : %.1f", tostring(score+timeLeft)))
 		label.set_text("LevelLabel#label", "Level : "..level )
 		getLevelParameters(level)
 		cibleEnCour=levelTargets[posInLevel]
