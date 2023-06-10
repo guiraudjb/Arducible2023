@@ -4,7 +4,18 @@ function init(self)
 	-- Remove this function if not needed
 	self.timeLeft=10
 
-	label.set_text("EndingMessage#label", string.format("%.1f", tostring(finalScore)))
+	label.set_text("FinalScore#label", string.format("%.1f", tostring(finalScore)))
+
+	if finalScore <= 50 then
+		label.set_text("EndingMessage#label", "TRY AGAIN")
+	elseif finalScore >50 and finalScore <=100 then
+		label.set_text("EndingMessage#label", "GOOD")
+	elseif finalScore >100 and finalScore <=150 then
+		label.set_text("EndingMessage#label", "GREAT")
+	elseif finalScore >150 then
+		label.set_text("EndingMessage#label", "EXCELLENT")
+	end
+	
 end
 
 function final(self)

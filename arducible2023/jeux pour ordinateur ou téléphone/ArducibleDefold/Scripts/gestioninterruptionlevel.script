@@ -26,6 +26,9 @@ function update(self, dt)
 		ActiveBonusValue = levelTimeExtenderValues[posInLevel]
 
 	else
+		finalScore = score+timeLeft
+		score=0
+		level=0
 		msg.post("main:/loader#main", "changeScene", { newScene = "sceneEnding" })
 	end
 
