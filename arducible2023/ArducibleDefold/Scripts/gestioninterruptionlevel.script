@@ -64,7 +64,7 @@ function getLevelParameters(self)
 if level == 1 then
 levelTargets = {3,2,1}
 levelTimeExtenderValues={4,0,0}
-levelTimeExtenderPositions={2,0,0}
+levelTimeExtenderPositions={1,0,0}
 end
 if level == 2 then
 	levelTargets = {2,3,1}
@@ -74,7 +74,7 @@ end
 if level == 3 then
 	levelTargets = {1,3,2}
 	levelTimeExtenderValues={3,0,0}
-	levelTimeExtenderPositions={2,0,0}
+	levelTimeExtenderPositions={1,0,0}
 end
 end
 
