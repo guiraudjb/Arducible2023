@@ -183,8 +183,8 @@ instances {
   id: "Bonus1"
   prototype: "/main/Bonus1.go"
   position {
-    x: 0.0
-    y: 0.0
+    x: 500.0
+    y: 400.0
     z: 0.0
   }
   rotation {

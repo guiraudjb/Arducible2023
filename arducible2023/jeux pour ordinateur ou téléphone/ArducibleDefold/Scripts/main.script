@@ -5,6 +5,8 @@ function init(self)
 	playingMusic=true
 	score=0
 	finalScore=0
+	level=0
+	oldLevel=-1
 	self.currentScene=""
 	changeScene(self, "sceneInfo")
 	
@@ -79,6 +81,8 @@ function on_input(self, action_id, action)
 		end
 	end
 end
+
+
 
 function on_reload(self)
 	-- Add reload-handling code here

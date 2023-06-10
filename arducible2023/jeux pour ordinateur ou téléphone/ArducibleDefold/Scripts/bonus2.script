@@ -1,6 +1,6 @@
 function init(self)
 	msg.post(".", "acquire_input_focus")
-	animationPlaying=false
+	animation2Playing=false
 
 	if ActiveBonusPos == 2 then
 		playanimation(ActiveBonusValue)
@@ -11,22 +11,22 @@ function final(self)
 end
 
 function update(self, dt)
-	print("active bonus pos"..ActiveBonusPos)
-	print("active bonus value"..ActiveBonusValue)
+	--print("active bonus pos"..ActiveBonusPos)
+	--print("active bonus value"..ActiveBonusValue)
 	if ActiveBonusPos == 2 then
 		playanimation(ActiveBonusValue)
 	else 
-		if animationPlaying==true then
+		if animation2Playing==true then
 			sprite.play_flipbook("#sprite", "blank")
-			animationPlaying = false
+			animation2Playing = false
 		end
 	end
 end
 
 function playanimation(type)
-	print(type)
-	print(ActiveBonusPos)
-	if animationPlaying==false then
+	--print(type)
+	--print(ActiveBonusPos)
+	if animation2Playing==false then
 		if type == 1 then
 			sprite.play_flipbook("#sprite", "Extending1Animation", function() end)
 		end
@@ -39,7 +39,7 @@ function playanimation(type)
 		if type == 4 then
 			sprite.play_flipbook("#sprite", "Extending4Animation", function() end)
 		end
-		animationPlaying = true
+		animation2Playing = true
 	else
 
 	end	
@@ -47,7 +47,7 @@ end
 
 function removebBonus()
 	sprite.play_flipbook("#sprite", "blank")
-	animationPlaying = false
+	animation2Playing = false
 end
 
 function fixed_update(self, dt)

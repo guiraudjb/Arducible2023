@@ -2,6 +2,8 @@ function init(self)
 	-- Add initialization code here
 	-- Learn more: https://defold.com/manuals/script/
 	-- Remove this function if not needed
+	print(level)
+	sprite.play_flipbook("#sprite", tostring(level) )
 end
 
 function final(self)
@@ -13,7 +15,7 @@ end
 function update(self, dt)
 	--print(level)
 	if oldLevel < level then
-		print("changement de niveau")
+		--print("changement de niveau")
 		oldLevel = level
 		sprite.play_flipbook("#sprite", tostring(level) )
 	end

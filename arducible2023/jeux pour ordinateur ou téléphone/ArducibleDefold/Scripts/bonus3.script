@@ -11,8 +11,8 @@ function final(self)
 end
 
 function update(self, dt)
-	print("active bonus pos"..ActiveBonusPos)
-	print("active bonus value"..ActiveBonusValue)
+	--print("active bonus pos"..ActiveBonusPos)
+	--print("active bonus value"..ActiveBonusValue)
 	if ActiveBonusPos == 3 then
 		playanimation(ActiveBonusValue)
 	else 
@@ -24,8 +24,8 @@ function update(self, dt)
 end
 
 function playanimation(type)
-	print(type)
-	print(ActiveBonusPos)
+	--print(type)
+	--print(ActiveBonusPos)
 	if animationPlaying==false then
 		if type == 1 then
 			sprite.play_flipbook("#sprite", "Extending1Animation", function() end)
