@@ -3,6 +3,8 @@ function init(self)
 	-- Learn more: https://defold.com/manuals/script/
 	-- Remove this function if not needed
 	self.timeLeft=10
+
+	label.set_text("EndingMessage#label", string.format("%.1f", tostring(finalScore)))
 end
 
 function final(self)
