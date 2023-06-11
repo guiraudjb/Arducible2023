@@ -9,7 +9,7 @@ function init(self)
 	level=0
 	oldLevel=-1
 	self.currentScene=""
-	changeScene(self, "sceneInfo")
+	changeScene(self, "Advertising")
 	
 end
 

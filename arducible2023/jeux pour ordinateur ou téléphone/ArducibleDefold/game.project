@@ -8,7 +8,7 @@ shared_state = 1
 [display]
 width = 1920
 height = 1080
-fullscreen = 0
+fullscreen = 1
 display_device_info = 1
 vsync = 1
 
@@ -20,9 +20,13 @@ app_icon_72x72 = /assets/icons/72x72.png
 app_icon_96x96 = /assets/icons/96x96.png
 app_icon_144x144 = /assets/icons/144x144.png
 app_icon_192x192 = /assets/icons/192x192.png
+package = com.ARDUCIBLE.DiyPetanqueGame
+immersive_mode = 1
 
 [project]
 title = ArducibleDefold
+publisher = guiraudjb
+developer = guiraudjb
 
 [engine]
 fixed_update_frequency = 30
