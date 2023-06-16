@@ -1,0 +1,78 @@
+/*
+Projet de billard japonais électronique
+Déclaration des variables
+ */
+//bibliothèque pour la musique
+
+// initialisation des 10 variables pour le stockage des valeurs de photorésistances.
+int photo1 = 0;
+int photo2 = 0;
+int photo3 = 0;
+int photo4 = 0;
+int photo5 = 0;
+int photo6 = 0;
+int photo7 = 0;
+int photo8 = 0;
+int photo9 = 0;
+int photo10 = 0;
+
+
+// the setup routine runs once when you press reset:
+void setup() {                
+Serial.begin(9600);
+pinMode(11, OUTPUT);//buzzer
+}
+
+// the loop routine runs over and over again forever:
+void loop() {
+Readphotores();
+afficherSerial();
+//playCoin();
+
+}
+//Déclaration des fonctions
+void afficherSerial(){
+Serial.print ("P1=");
+Serial.print(  photo1 );
+Serial.print (" P2=");
+Serial.print(  photo2 );
+Serial.print (" P3=");
+Serial.print(  photo3 );
+Serial.print (" P4=");
+Serial.print(  photo4 );
+Serial.print (" P5=");
+Serial.print(  photo5 );
+Serial.print (" P6=");
+Serial.print(  photo6 );
+Serial.print (" P7=");
+Serial.print(  photo7 );
+Serial.print (" P8=");
+Serial.print(  photo8 );
+Serial.print (" P9=");
+Serial.print(  photo9 );
+Serial.print (" P10=");
+Serial.println(  photo10 );
+}
+//Fonction musique coin mario
+void playCoin(){
+tone(11,988,125);
+delay(125);
+noTone(11);
+tone(11,1319,600);
+delay(600);
+noTone(11);
+}
+
+//Fonction lecture photoresistance
+void Readphotores(){
+photo1 = analogRead(A1);
+photo2 = analogRead(A2);
+photo3 = analogRead(A3);
+photo4 = analogRead(A4);
+photo5 = analogRead(A5);
+photo6 = analogRead(A6);
+photo7 = analogRead(A7);
+photo8 = analogRead(A8);
+photo9 = analogRead(A9);
+photo10 = analogRead(A10); 
+}
