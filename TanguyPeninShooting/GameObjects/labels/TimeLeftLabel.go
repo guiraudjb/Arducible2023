@@ -32,7 +32,7 @@ embedded_components {
   "line_break: false\n"
   "text: \"Time Left : 000\"\n"
   "font: \"/GameObjects/labels/ArcadeFont.font\"\n"
-  "material: \"/builtins/fonts/label.material\"\n"
+  "material: \"/builtins/materials/sprite.material\"\n"
   ""
   position {
     x: 0.0

@@ -9,8 +9,8 @@ embedded_components {
   "}\n"
   "color {\n"
   "  x: 1.0\n"
-  "  y: 0.0\n"
-  "  z: 0.0\n"
+  "  y: 1.0\n"
+  "  z: 1.0\n"
   "  w: 1.0\n"
   "}\n"
   "outline {\n"
@@ -32,7 +32,7 @@ embedded_components {
   "line_break: false\n"
   "text: \"00\"\n"
   "font: \"/GameObjects/labels/ArcadeFont.font\"\n"
-  "material: \"/builtins/fonts/label.material\"\n"
+  "material: \"/builtins/fonts/font-fnt.material\"\n"
   ""
   position {
     x: 0.0
