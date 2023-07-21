@@ -32,7 +32,7 @@ embedded_components {
   "line_break: false\n"
   "text: \"00\"\n"
   "font: \"/GameObjects/labels/ArcadeFont.font\"\n"
-  "material: \"/builtins/fonts/font-fnt.material\"\n"
+  "material: \"/builtins/fonts/label-fnt.material\"\n"
   ""
   position {
     x: 0.0

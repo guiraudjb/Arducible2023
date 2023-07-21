@@ -2,15 +2,15 @@ embedded_components {
   id: "label"
   type: "label"
   data: "size {\n"
-  "  x: 1920.0\n"
+  "  x: 960.0\n"
   "  y: 64.0\n"
   "  z: 0.0\n"
   "  w: 0.0\n"
   "}\n"
   "color {\n"
-  "  x: 1.0\n"
-  "  y: 0.0\n"
-  "  z: 0.0\n"
+  "  x: 0.9490196\n"
+  "  y: 0.9490196\n"
+  "  z: 0.9490196\n"
   "  w: 1.0\n"
   "}\n"
   "outline {\n"
@@ -32,11 +32,11 @@ embedded_components {
   "line_break: false\n"
   "text: \"Time Left : 000\"\n"
   "font: \"/GameObjects/labels/ArcadeFont.font\"\n"
-  "material: \"/builtins/materials/sprite.material\"\n"
+  "material: \"/builtins/fonts/label-fnt.material\"\n"
   ""
   position {
     x: 0.0
-    y: 32.0
+    y: 0.0
     z: 0.0
   }
   rotation {
