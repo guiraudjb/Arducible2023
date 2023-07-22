@@ -41,7 +41,7 @@ function on_input(self, action_id, action)
 						if level < 3 then --TEST 6
 						level = level +1
 						else				--SINON TEST 6
-							finalScore = score+timeLeft
+						finalScore = score+timeLeft
 						score=0
 						level=0
 						msg.post("main:/loader#main", "changeScene", { newScene = "sceneEnding" })
