@@ -17,7 +17,7 @@ end
 function update(self, dt)
 		if timeLeft > 0 then
 		timeLeft = math.max(timeLeft - dt, 0)
-		label.set_text("TimeLeftLabel#label", string.format("Time Left : %.1f", tostring(timeLeft)))
+		label.set_text("TimeLeftLabel#label", string.format("Time Left :%.1f", tostring(timeLeft)))
 		label.set_text("ScoreLabel#label", string.format("SCORE : %.1f", tostring(score+timeLeft)))
 		label.set_text("LevelLabel#label", "Level : "..level )
 		getLevelParameters(level)
