@@ -2,9 +2,7 @@ function init(self)
 	-- Add initialization code here
 	-- Learn more: https://defold.com/manuals/script/
 	-- Remove this function if not needed
-	self.timeLeft=10
-
-	label.set_text("FinalScore#label", string.format("%.1f", tostring(finalScore)))
+	self.timeLeft=12
 	label.set_text("EndingMessage#label2", string.format("%.1f", tostring(finalScore)))
 	
 	if finalScore <= 50 then

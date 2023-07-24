@@ -43,8 +43,8 @@ instances {
   id: "EndingMessage"
   prototype: "/GameObjects/labels/EndingMessage.go"
   position {
-    x: 1050.0
-    y: 400.0
+    x: 960.0
+    y: 540.0
     z: 0.0
   }
   rotation {
