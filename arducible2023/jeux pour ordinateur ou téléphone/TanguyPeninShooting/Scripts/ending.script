@@ -5,19 +5,20 @@ function init(self)
 	self.timeLeft=10
 
 	label.set_text("FinalScore#label", string.format("%.1f", tostring(finalScore)))
-
+	label.set_text("EndingMessage#label2", string.format("%.1f", tostring(finalScore)))
+	
 	if finalScore <= 50 then
 		label.set_text("EndingMessage#label", "ESSAYE ENCORE")
-		sprite.play_flipbook("go1#sprite", "blank")
+		sprite.play_flipbook("EndingMessage#sprite1", "blank")
 	elseif finalScore >50 and finalScore <=100 then
 		label.set_text("EndingMessage#label", "BRAVO")
-		sprite.play_flipbook("go1#sprite", "rank3")
+		sprite.play_flipbook("EndingMessage#sprite1", "rank3")
 	elseif finalScore >100 and finalScore <=150 then
 		label.set_text("EndingMessage#label", "SUPER")
-		sprite.play_flipbook("go1#sprite", "rank2")
+		sprite.play_flipbook("EndingMessage#sprite1", "rank2")
 	elseif finalScore >150 then
 		label.set_text("EndingMessage#label", "EXCELLENT")
-		sprite.play_flipbook("go1#sprite", "rank1")
+		sprite.play_flipbook("EndingMessage#sprite1", "rank1")
 	end
 	
 end

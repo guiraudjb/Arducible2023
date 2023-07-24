@@ -466,77 +466,9 @@ embedded_instances {
   }
 }
 embedded_instances {
-  id: "go5"
-  data: "embedded_components {\n"
-  "  id: \"label\"\n"
-  "  type: \"label\"\n"
-  "  data: \"size {\\n"
-  "  x: 128.0\\n"
-  "  y: 32.0\\n"
-  "  z: 0.0\\n"
-  "  w: 0.0\\n"
-  "}\\n"
-  "color {\\n"
-  "  x: 0.2\\n"
-  "  y: 0.2\\n"
-  "  z: 0.2\\n"
-  "  w: 1.0\\n"
-  "}\\n"
-  "outline {\\n"
-  "  x: 0.0\\n"
-  "  y: 0.0\\n"
-  "  z: 0.0\\n"
-  "  w: 1.0\\n"
-  "}\\n"
-  "shadow {\\n"
-  "  x: 0.0\\n"
-  "  y: 0.0\\n"
-  "  z: 0.0\\n"
-  "  w: 1.0\\n"
-  "}\\n"
-  "leading: 1.0\\n"
-  "tracking: 0.0\\n"
-  "pivot: PIVOT_CENTER\\n"
-  "blend_mode: BLEND_MODE_ALPHA\\n"
-  "line_break: false\\n"
-  "text: \\\"+1 PT + 30s TIME EXTENTION\\\"\\n"
-  "font: \\\"/GameObjects/labels/SmallArcadeFont.font\\\"\\n"
-  "material: \\\"/builtins/fonts/label-df.material\\\"\\n"
-  "\"\n"
-  "  position {\n"
-  "    x: 0.0\n"
-  "    y: 0.0\n"
-  "    z: 0.0\n"
-  "  }\n"
-  "  rotation {\n"
-  "    x: 0.0\n"
-  "    y: 0.0\n"
-  "    z: 0.0\n"
-  "    w: 1.0\n"
-  "  }\n"
-  "}\n"
-  ""
-  position {
-    x: 1097.0
-    y: 540.0
-    z: 1.0
-  }
-  rotation {
-    x: 0.0
-    y: 0.0
-    z: 0.0
-    w: 1.0
-  }
-  scale3 {
-    x: 1.0
-    y: 1.0
-    z: 1.0
-  }
-}
-embedded_instances {
   id: "go6"
   data: "embedded_components {\n"
-  "  id: \"label\"\n"
+  "  id: \"label2\"\n"
   "  type: \"label\"\n"
   "  data: \"size {\\n"
   "  x: 128.0\\n"
@@ -545,9 +477,9 @@ embedded_instances {
   "  w: 0.0\\n"
   "}\\n"
   "color {\\n"
-  "  x: 0.2\\n"
-  "  y: 0.2\\n"
-  "  z: 0.2\\n"
+  "  x: 1.0\\n"
+  "  y: 1.0\\n"
+  "  z: 1.0\\n"
   "  w: 1.0\\n"
   "}\\n"
   "outline {\\n"
@@ -573,6 +505,26 @@ embedded_instances {
   "\"\n"
   "  position {\n"
   "    x: 0.0\n"
+  "    y: -10.0\n"
+  "    z: 0.0\n"
+  "  }\n"
+  "  rotation {\n"
+  "    x: 0.0\n"
+  "    y: 0.0\n"
+  "    z: 0.0\n"
+  "    w: 1.0\n"
+  "  }\n"
+  "}\n"
+  "embedded_components {\n"
+  "  id: \"sprite\"\n"
+  "  type: \"sprite\"\n"
+  "  data: \"tile_set: \\\"/assets/GameSprites.atlas\\\"\\n"
+  "default_animation: \\\"1000x800\\\"\\n"
+  "material: \\\"/builtins/materials/sprite.material\\\"\\n"
+  "blend_mode: BLEND_MODE_ALPHA\\n"
+  "\"\n"
+  "  position {\n"
+  "    x: 0.0\n"
   "    y: 0.0\n"
   "    z: 0.0\n"
   "  }\n"
@@ -583,28 +535,8 @@ embedded_instances {
   "    w: 1.0\n"
   "  }\n"
   "}\n"
-  ""
-  position {
-    x: 1100.0
-    y: 412.0
-    z: 1.0
-  }
-  rotation {
-    x: 0.0
-    y: 0.0
-    z: 0.0
-    w: 1.0
-  }
-  scale3 {
-    x: 1.0
-    y: 1.0
-    z: 1.0
-  }
-}
-embedded_instances {
-  id: "go7"
-  data: "embedded_components {\n"
-  "  id: \"label\"\n"
+  "embedded_components {\n"
+  "  id: \"label3\"\n"
   "  type: \"label\"\n"
   "  data: \"size {\\n"
   "  x: 128.0\\n"
@@ -613,9 +545,9 @@ embedded_instances {
   "  w: 0.0\\n"
   "}\\n"
   "color {\\n"
-  "  x: 0.2\\n"
-  "  y: 0.2\\n"
-  "  z: 0.2\\n"
+  "  x: 1.0\\n"
+  "  y: 1.0\\n"
+  "  z: 1.0\\n"
   "  w: 1.0\\n"
   "}\\n"
   "outline {\\n"
@@ -641,7 +573,7 @@ embedded_instances {
   "\"\n"
   "  position {\n"
   "    x: 0.0\n"
-  "    y: 0.0\n"
+  "    y: -143.0\n"
   "    z: 0.0\n"
   "  }\n"
   "  rotation {\n"
@@ -651,28 +583,8 @@ embedded_instances {
   "    w: 1.0\n"
   "  }\n"
   "}\n"
-  ""
-  position {
-    x: 1100.0
-    y: 284.0
-    z: 1.0
-  }
-  rotation {
-    x: 0.0
-    y: 0.0
-    z: 0.0
-    w: 1.0
-  }
-  scale3 {
-    x: 1.0
-    y: 1.0
-    z: 1.0
-  }
-}
-embedded_instances {
-  id: "go8"
-  data: "embedded_components {\n"
-  "  id: \"label\"\n"
+  "embedded_components {\n"
+  "  id: \"label4\"\n"
   "  type: \"label\"\n"
   "  data: \"size {\\n"
   "  x: 128.0\\n"
@@ -681,9 +593,9 @@ embedded_instances {
   "  w: 0.0\\n"
   "}\\n"
   "color {\\n"
-  "  x: 0.2\\n"
-  "  y: 0.2\\n"
-  "  z: 0.2\\n"
+  "  x: 1.0\\n"
+  "  y: 1.0\\n"
+  "  z: 1.0\\n"
   "  w: 1.0\\n"
   "}\\n"
   "outline {\\n"
@@ -709,7 +621,55 @@ embedded_instances {
   "\"\n"
   "  position {\n"
   "    x: 0.0\n"
+  "    y: -245.0\n"
+  "    z: 0.0\n"
+  "  }\n"
+  "  rotation {\n"
+  "    x: 0.0\n"
   "    y: 0.0\n"
+  "    z: 0.0\n"
+  "    w: 1.0\n"
+  "  }\n"
+  "}\n"
+  "embedded_components {\n"
+  "  id: \"label1\"\n"
+  "  type: \"label\"\n"
+  "  data: \"size {\\n"
+  "  x: 128.0\\n"
+  "  y: 32.0\\n"
+  "  z: 0.0\\n"
+  "  w: 0.0\\n"
+  "}\\n"
+  "color {\\n"
+  "  x: 1.0\\n"
+  "  y: 1.0\\n"
+  "  z: 1.0\\n"
+  "  w: 1.0\\n"
+  "}\\n"
+  "outline {\\n"
+  "  x: 0.0\\n"
+  "  y: 0.0\\n"
+  "  z: 0.0\\n"
+  "  w: 1.0\\n"
+  "}\\n"
+  "shadow {\\n"
+  "  x: 0.0\\n"
+  "  y: 0.0\\n"
+  "  z: 0.0\\n"
+  "  w: 1.0\\n"
+  "}\\n"
+  "leading: 1.0\\n"
+  "tracking: 0.0\\n"
+  "pivot: PIVOT_CENTER\\n"
+  "blend_mode: BLEND_MODE_ALPHA\\n"
+  "line_break: false\\n"
+  "text: \\\"+1 PT + 30s TIME EXTENTION\\\"\\n"
+  "font: \\\"/GameObjects/labels/SmallArcadeFont.font\\\"\\n"
+  "material: \\\"/builtins/fonts/label-df.material\\\"\\n"
+  "\"\n"
+  "  position {\n"
+  "    x: 0.0\n"
+  "    y: 98.0\n"
   "    z: 0.0\n"
   "  }\n"
   "  rotation {\n"
@@ -722,8 +682,8 @@ embedded_instances {
   ""
   position {
     x: 1100.0
-    y: 156.0
-    z: 1.0
+    y: 412.0
+    z: 0.0
   }
   rotation {
     x: 0.0
@@ -738,7 +698,7 @@ embedded_instances {
   }
 }
 embedded_instances {
-  id: "go2"
+  id: "go9"
   data: "embedded_components {\n"
   "  id: \"sprite\"\n"
   "  type: \"sprite\"\n"
