@@ -1,8 +1,11 @@
 function init(self)
-	-- Add initialization code here
-	-- Learn more: https://defold.com/manuals/script/
-	-- Remove this function if not needed
 	self.timeLeft=10
+	finalScore=0
+	level=0
+	score=0
+	bonusHitted=0
+	oldLevel=1
+	posInLevel = 1
 end
 
 function final(self)
