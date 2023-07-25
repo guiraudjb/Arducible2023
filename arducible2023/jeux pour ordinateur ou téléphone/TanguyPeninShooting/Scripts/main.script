@@ -3,11 +3,6 @@ function init(self)
 	ActiveKeyboard=true
 	backgroundMusic = sound.play("BackgroundMusic#music")
 	playingMusic=true
-	bonusHitted=0
-	score=0
-	finalScore=0
-	level=0
-	oldLevel=-1
 	self.currentScene=""
 	changeScene(self, "Advertising")
 	
