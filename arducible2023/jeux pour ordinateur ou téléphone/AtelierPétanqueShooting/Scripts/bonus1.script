@@ -1,0 +1,62 @@
+function init(self)
+	animationPlaying=false
+end
+	function final(self)
+end
+
+function update(self, dt)
+	print ("status du bonus"..bonusHitted)
+	if bonusHitted == 0 then
+		if ActiveBonusPos == 1 then
+			go.set_position(vmath.vector3(450,400,0))
+			playanimation(ActiveBonusValue)
+		elseif ActiveBonusPos == 2 then
+			go.set_position(vmath.vector3(1060,400,0))
+			playanimation(ActiveBonusValue)
+		elseif ActiveBonusPos == 3 then
+			go.set_position(vmath.vector3(1670,400,0))
+			playanimation(ActiveBonusValue)
+		else 
+			if animationPlaying==true then
+			go.set_position(vmath.vector3(0,0,0))
+			sprite.play_flipbook("#sprite", "blank")
+			animationPlaying = false
+			end
+
+		end
+	else
+	sprite.play_flipbook("#sprite", "blank")
+	animationPlaying = false	
+	end
+end
+
+function playanimation(type)
+	--print(type)
+	--print(ActiveBonusPos)
+	if animationPlaying==false then
+		if type == 1 then
+			sprite.play_flipbook("#sprite", "Extending1Animation", function() end)
+		end
+		if type == 2 then
+			sprite.play_flipbook("#sprite", "Extending2Animation", function() end)
+		end
+		if type == 3 then
+			sprite.play_flipbook("#sprite", "Extending3Animation", function() end)
+		end
+		if type == 4 then
+			sprite.play_flipbook("#sprite", "Extending4Animation", function() end)
+		end
+		animationPlaying = true
+	else
+
+	end	
+end
+
+function removebBonus()
+	sprite.play_flipbook("#sprite", "blank")
+	animationPlaying = false
+end
+
+function rollingBonus(bonuspos,bonusValue)
+
+end
