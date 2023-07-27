@@ -2,15 +2,15 @@ embedded_components {
   id: "label"
   type: "label"
   data: "size {\n"
-  "  x: 1920.0\n"
+  "  x: 800.0\n"
   "  y: 64.0\n"
   "  z: 0.0\n"
   "  w: 0.0\n"
   "}\n"
   "color {\n"
-  "  x: 1.0\n"
-  "  y: 1.0\n"
-  "  z: 1.0\n"
+  "  x: 0.0\n"
+  "  y: 0.0\n"
+  "  z: 0.0\n"
   "  w: 1.0\n"
   "}\n"
   "outline {\n"
@@ -31,12 +31,12 @@ embedded_components {
   "blend_mode: BLEND_MODE_ALPHA\n"
   "line_break: false\n"
   "text: \"333\"\n"
-  "font: \"/GameObjects/labels/ArcadeFont.font\"\n"
+  "font: \"/GameObjects/labels/8bitArcadein.font\"\n"
   "material: \"/builtins/fonts/label.material\"\n"
   ""
   position {
-    x: 960.0
-    y: 32.0
+    x: 0.0
+    y: 0.0
     z: 0.0
   }
   rotation {
