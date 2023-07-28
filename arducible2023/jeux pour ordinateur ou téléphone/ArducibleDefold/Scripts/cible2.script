@@ -65,10 +65,11 @@ function update(self, dt)
 		else
 			go.set("#sprite", "tint",  vmath.vector4(1, 1, 1, 1))
 		end
-		if ActiveBonusPos == 2 then
-			if bonusHitted == 0 then
-				go.set("#sprite", "tint",  vmath.vector4(0, 0.47, 1, 1)) 	
-						end
+		
+	end
+	if ActiveBonusPos == 2 then
+		if bonusHitted == 0 then
+			go.set("#sprite", "tint",  vmath.vector4(0, 0.47, 1, 1)) 	
 		end
 	end
 end

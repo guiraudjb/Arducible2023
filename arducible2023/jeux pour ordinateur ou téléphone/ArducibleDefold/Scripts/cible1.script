@@ -66,10 +66,11 @@ function update(self, dt)
 			go.set("#sprite", "tint",  vmath.vector4(1, 1, 1, 1)) -- TEINTE NORMALE
 		end
 
-		if ActiveBonusPos == 1 then
-			if bonusHitted == 0 then
+		
+	end
+	if ActiveBonusPos == 1 then
+		if bonusHitted == 0 then
 			go.set("#sprite", "tint",  vmath.vector4(0, 0.47, 1, 1)) 	
-			end
 		end
 	end
 end
