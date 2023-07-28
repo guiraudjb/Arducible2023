@@ -1,5 +1,5 @@
 function init(self)
-	self.timeLeft=12
+	self.timeLeft=1
 	level=0
 	label.set_text("EndingMessage#label2", string.format("%.1f", tostring(finalScore)))
 	

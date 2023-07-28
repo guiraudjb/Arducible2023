@@ -8,7 +8,7 @@ shared_state = 1
 [display]
 width = 1920
 height = 1080
-fullscreen = 1
+fullscreen = 0
 display_device_info = 1
 vsync = 1
 
