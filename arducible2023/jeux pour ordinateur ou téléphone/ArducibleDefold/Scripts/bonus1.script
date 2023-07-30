@@ -66,12 +66,12 @@ function rollingBonus(ActiveBonusPos)
 
 	local bonuspos = go.get_position()
 	local offsetx=610*(ActiveBonusPos-1)+350
-	local offsety=330
+	local offsety=400
 	local deplacement=3
 	local rayonx=100
 	local rayony=40
 	local zoonBonus
-	local zoominitial = 0.5
+	local zoominitial = 1.5
 	local zoomvariation = rayony / rayonx
 
 	--augmentation de l'angle
