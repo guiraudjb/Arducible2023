@@ -3,17 +3,17 @@
 
 import cv2
 import mediapipe as mp
-
+zoneinterdite=False
 # initialize Pose estimator
 mp_drawing = mp.solutions.drawing_utils
 mp_pose = mp.solutions.pose
 
 pose = mp_pose.Pose(
-    min_detection_confidence=0.8,
+    min_detection_confidence=0.6,
     min_tracking_confidence=0.5)
 
 # create capture object
-#cap = cv2.VideoCapture('video.mp4')
+#cap = cv2.VideoCapture('./echvid/01.webm')
 cap=cv2.VideoCapture(0)
 cap.set(3, 320)
 cap.set(4, 240)
@@ -31,16 +31,22 @@ while cap.isOpened():
 
         # process the RGB frame to get the result
         results = pose.process(RGB)
+        
         if results.pose_landmarks: # test des resultats
-            boucheX=results.pose_landmarks.landmark[10].x*320
-            boucheY=results.pose_landmarks.landmark[10].y*240
-            print(boucheY)
-            if boucheY > 161:
-                cv2.rectangle(frame,(0,160),(319,239),(255,0,0),-1)#draw restricted area
+            zoneinterdite=False
+            for i in range(1, 32):
+                #print(i) # prints: 1, 2, 3, 4
+                posY=results.pose_landmarks.landmark[i].y*240
+                print(posY)
+                if posY > 161:
+                    zoneinterdite=True
 
 
         #print(results.pose_landmarks)
         # draw detected skeleton on the frame
+        if zoneinterdite==True:
+            cv2.rectangle(frame,(0,160),(319,239),(255,0,0),-1)#draw restricted area
+
         mp_drawing.draw_landmarks(
             frame, results.pose_landmarks, mp_pose.POSE_CONNECTIONS)
 
