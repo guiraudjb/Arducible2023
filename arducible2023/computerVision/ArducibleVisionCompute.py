@@ -12,12 +12,15 @@ pose = mp_pose.Pose(
     min_detection_confidence=0.6,
     min_tracking_confidence=0.5)
 
+Largeur=640
+Hauteur=480
+LimiteRestrictedArea=round(Hauteur*0.67)
 # create capture object
 #cap = cv2.VideoCapture('./echvid/01.webm')
 cap=cv2.VideoCapture(0)
-cap.set(3, 320)
-cap.set(4, 240)
-out = cv2.VideoWriter('outpy.avi',cv2.VideoWriter_fourcc('M','J','P','G'), 10, (320,240))
+cap.set(3, Largeur)
+cap.set(4, Hauteur)
+out = cv2.VideoWriter('outpy.avi',cv2.VideoWriter_fourcc('M','J','P','G'), 10, (Largeur,Hauteur))
 
 font = cv2.FONT_HERSHEY_SIMPLEX
 
@@ -36,23 +39,23 @@ while cap.isOpened():
             zoneinterdite=False
             for i in range(1, 32):
                 #print(i) # prints: 1, 2, 3, 4
-                posY=results.pose_landmarks.landmark[i].y*240
+                posY=results.pose_landmarks.landmark[i].y*Hauteur
                 print(posY)
-                if posY > 161:
+                if posY > LimiteRestrictedArea:
                     zoneinterdite=True
 
 
         #print(results.pose_landmarks)
         # draw detected skeleton on the frame
         if zoneinterdite==True:
-            cv2.rectangle(frame,(0,160),(319,239),(255,0,0),-1)#draw restricted area
+            cv2.rectangle(frame,(0,LimiteRestrictedArea),(Largeur-1,Hauteur-1),(255,0,0),-1)#draw restricted area
 
         mp_drawing.draw_landmarks(
             frame, results.pose_landmarks, mp_pose.POSE_CONNECTIONS)
 
         # show the final output
-        cv2.rectangle(frame,(0,160),(319,239),(0,255,0),1)#draw restricted area
-        cv2.putText(frame,'Restricted Area',(10,190), font, 1,(255,255,255),2,cv2.LINE_AA)
+        cv2.rectangle(frame,(0,LimiteRestrictedArea),(Largeur-1,Hauteur-1),(0,255,0),1)#draw restricted area
+        cv2.putText(frame,'Restricted Area',(10,LimiteRestrictedArea+30), font, 1,(255,255,255),2,cv2.LINE_AA)
         cv2.imshow('Output', frame)
         out.write(frame)
 
