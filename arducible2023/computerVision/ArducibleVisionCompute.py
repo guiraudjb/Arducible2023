@@ -43,12 +43,11 @@ while cap.isOpened():
                 print(posY)
                 if posY > LimiteRestrictedArea:
                     zoneinterdite=True
-
-
-        #print(results.pose_landmarks)
-        # draw detected skeleton on the frame
         if zoneinterdite==True:
             cv2.rectangle(frame,(0,LimiteRestrictedArea),(Largeur-1,Hauteur-1),(255,0,0),-1)#draw restricted area
+        
+        #print(results.pose_landmarks)
+        # draw detected skeleton on the frame
 
         mp_drawing.draw_landmarks(
             frame, results.pose_landmarks, mp_pose.POSE_CONNECTIONS)
