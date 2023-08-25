@@ -9,15 +9,15 @@ mp_drawing = mp.solutions.drawing_utils
 mp_pose = mp.solutions.pose
 
 pose = mp_pose.Pose(
-    min_detection_confidence=0.6,
+    min_detection_confidence=0.5,
     min_tracking_confidence=0.5)
 
 Largeur=640
 Hauteur=480
 LimiteRestrictedArea=round(Hauteur*0.67)
 # create capture object
-#cap = cv2.VideoCapture('./echvid/01.webm')
-cap=cv2.VideoCapture(0)
+cap = cv2.VideoCapture('./echvid/tanguy2.mp4')
+#cap=cv2.VideoCapture(0)
 cap.set(3, Largeur)
 cap.set(4, Hauteur)
 out = cv2.VideoWriter('outpy.avi',cv2.VideoWriter_fourcc('M','J','P','G'), 10, (Largeur,Hauteur))
@@ -43,6 +43,7 @@ while cap.isOpened():
                 print(posY)
                 if posY > LimiteRestrictedArea:
                     zoneinterdite=True
+        #draw restricted area
         if zoneinterdite==True:
             cv2.rectangle(frame,(0,LimiteRestrictedArea),(Largeur-1,Hauteur-1),(255,0,0),-1)#draw restricted area
         
