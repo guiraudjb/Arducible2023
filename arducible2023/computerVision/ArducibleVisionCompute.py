@@ -16,8 +16,8 @@ Largeur=640
 Hauteur=480
 LimiteRestrictedArea=round(Hauteur*0.67)
 # create capture object
-cap = cv2.VideoCapture('./echvid/tanguy2.mp4')
-#cap=cv2.VideoCapture(0)
+#cap = cv2.VideoCapture('./echvid/tanguy2.mp4')
+cap=cv2.VideoCapture(0)
 cap.set(3, Largeur)
 cap.set(4, Hauteur)
 out = cv2.VideoWriter('outpy.avi',cv2.VideoWriter_fourcc('M','J','P','G'), 10, (Largeur,Hauteur))
