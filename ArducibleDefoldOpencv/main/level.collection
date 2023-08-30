@@ -1,7 +1,7 @@
 name: "level"
 instances {
   id: "Background"
-  prototype: "/main/Background.go"
+  prototype: "/GameObjects/Background.go"
   position {
     x: 0.0
     y: 0.0
@@ -21,7 +21,7 @@ instances {
 }
 instances {
   id: "engine"
-  prototype: "/main/engine.go"
+  prototype: "/GameObjects/engine.go"
   position {
     x: 0.0
     y: 0.0
@@ -61,7 +61,7 @@ instances {
 }
 instances {
   id: "Cible1"
-  prototype: "/main/Cible1.go"
+  prototype: "/GameObjects/Cible1.go"
   position {
     x: 350.0
     y: 200.0
@@ -81,7 +81,7 @@ instances {
 }
 instances {
   id: "Cible2"
-  prototype: "/main/Cible2.go"
+  prototype: "/GameObjects/Cible2.go"
   position {
     x: 960.0
     y: 200.0
@@ -101,7 +101,7 @@ instances {
 }
 instances {
   id: "Cible3"
-  prototype: "/main/Cible3.go"
+  prototype: "/GameObjects/Cible3.go"
   position {
     x: 1570.0
     y: 200.0
@@ -181,7 +181,7 @@ instances {
 }
 instances {
   id: "Bonus1"
-  prototype: "/main/Bonus1.go"
+  prototype: "/GameObjects/Bonus1.go"
   position {
     x: 500.0
     y: 400.0

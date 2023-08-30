@@ -41,7 +41,7 @@ instances {
 }
 instances {
   id: "Background"
-  prototype: "/main/Background.go"
+  prototype: "/GameObjects/Background.go"
   position {
     x: 0.0
     y: 0.0
