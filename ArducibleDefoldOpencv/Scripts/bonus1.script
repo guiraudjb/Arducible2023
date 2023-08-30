@@ -78,7 +78,7 @@ function rollingBonus(ActiveBonusPos)
 	angleBonus = angleBonus + deplacement
 	--limitation à 360
 	angleBonus = math.fmod(angleBonus, 360)
-	print ("angle : ",angleBonus)
+	--print ("angle : ",angleBonus)
 	--calcul des valeurs de position du bonuspos
 	bonuspos.x = math.cos(angleBonus * math.pi / 180 ) * rayonx + offsetx
 	bonuspos.y = math.sin(angleBonus * math.pi / 180 ) * rayony + offsety

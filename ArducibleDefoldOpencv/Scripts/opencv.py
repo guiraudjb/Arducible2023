@@ -1,6 +1,3 @@
-# TechVidvan Human pose estimator
-# import necessary packages
-
 import cv2
 import mediapipe as mp
 zoneinterdite=False
@@ -44,7 +41,7 @@ while cap.isOpened():
             for i in range(1, 32):
                 #print(i) # prints: 1, 2, 3, 4
                 posY=results.pose_landmarks.landmark[i].y*Hauteur
-                print(posY)
+                #print(posY)
                 if posY > LimiteRestrictedArea:
                     zoneinterdite=True
         #draw restricted area
