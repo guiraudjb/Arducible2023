@@ -63,7 +63,7 @@ while cap.isOpened():
         # show the final output
         cv2.rectangle(frame,(0,LimiteRestrictedArea),(Largeur-1,Hauteur-1),(0,255,0),1)#draw restricted area
         cv2.putText(frame,'Restricted Area',(10,LimiteRestrictedArea+30), font, 1,(255,255,255),2,cv2.LINE_AA)
-        #cv2.imshow('Output', frame)
+        cv2.imshow('Output', frame)
         #out.write(frame)
 
     except:

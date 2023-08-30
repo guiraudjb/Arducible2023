@@ -65,6 +65,7 @@ uint8_t custChar[8][8] = {
   B00000,
   B00000,
   B00000,
+lcd.setCursor(0,0);
   B11111,
   B11111
 }, // -3
@@ -223,9 +224,11 @@ cibleEnCours=ListeCibles[posCible];
 posCible=0;
 GameTimer=120;
 Score=0;
+  getReady();
   pixels.clear();
   pixels.show();
   pixels.setPixelColor(cibleEnCours+reserveLedCible, pixels.Color(0, intensiteLed, 0));
+
   pixels.show();   // Mise a jour de la couleur des leds. 
   previousMillis=millis();
 }
@@ -418,4 +421,23 @@ lcd.setCursor(0,0);
     lcd.clear();
 
   RunNewGame();  
+}
+
+void getReady(){
+
+  lcd.clear();
+  pixels.clear();
+  pixels.show();
+  lcd.setCursor(5,2);
+  lcd.print(F("GET READY!"));
+  tone(Buzzer,450,250);
+  delay(1000);
+  noTone(Buzzer);
+  tone(Buzzer,450,250);
+  delay(1000);
+  noTone(Buzzer);
+  tone(Buzzer,750,500);
+  delay(500);
+  noTone(Buzzer);
+  lcd.clear();
 }
