@@ -1,7 +1,7 @@
 function init(self)
 	msg.post(".", "acquire_input_focus")
 	ActiveKeyboard=true
-	ComputerVision=os.execute('source ./Scripts/pythonvenv/bin/activate; python3 ./Scripts/opencv.py &')
+	ComputerVision=os.execute('. ./Scripts/pythonvenv/bin/activate; python3 ./Scripts/opencv.py &')
 	backgroundMusic = sound.play("BackgroundMusic#music")
 	playingMusic=true
 	self.currentScene=""
