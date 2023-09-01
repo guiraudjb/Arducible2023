@@ -8,7 +8,7 @@ shared_state = 1
 [display]
 width = 1920
 height = 1080
-fullscreen = 0
+fullscreen = 1
 display_device_info = 1
 vsync = 1
 
@@ -27,6 +27,7 @@ immersive_mode = 1
 title = Aducible Petanque Shooting OpenCV
 publisher = guiraudjb
 developer = guiraudjb
+dependencies = 
 
 [engine]
 fixed_update_frequency = 30

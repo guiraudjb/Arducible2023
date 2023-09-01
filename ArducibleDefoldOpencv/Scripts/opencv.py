@@ -11,7 +11,6 @@ mp_pose = mp.solutions.pose
 pose = mp_pose.Pose(
     min_detection_confidence=0.5,
     min_tracking_confidence=0.5)
-
 Largeur=320
 Hauteur=240
 LimiteRestrictedArea=round(Hauteur*0.67)
@@ -20,7 +19,7 @@ LimiteRestrictedArea=round(Hauteur*0.67)
 cap=cv2.VideoCapture(0)
 cap.set(3, Largeur)
 cap.set(4, Hauteur)
-out = cv2.VideoWriter('outpy.avi',cv2.VideoWriter_fourcc('M','J','P','G'), 10, (Largeur,Hauteur))
+#out = cv2.VideoWriter('outpy.avi',cv2.VideoWriter_fourcc('M','J','P','G'), 10, (Largeur,Hauteur))
 
 font = cv2.FONT_HERSHEY_SIMPLEX
 
