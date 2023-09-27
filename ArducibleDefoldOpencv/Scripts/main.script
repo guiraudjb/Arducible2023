@@ -3,7 +3,8 @@ function init(self)
 	ActiveKeyboard1=true
 	ActiveKeyboard2=true
 	ActiveKeyboard3=true
-	ComputerVision=os.execute('. ./Scripts/pythonvenv/bin/activate; python3 ./Scripts/opencv.py &')
+	--ComputerVision=os.execute('. ./Scripts/pythonvenv/bin/activate; python3 ./Scripts/opencv.py &')
+	ComputerVision=os.execute('./Scripts/runcam.sh &')
 	backgroundMusic = sound.play("BackgroundMusic#music")
 	playingMusic=true
 	self.currentScene=""

@@ -14,13 +14,17 @@ end
 
 function on_input(self, action_id, action)
 	if action_id == hash("RestrictedArea") then 
-		if action.pressed then
+		--if action.pressed then
 			go.set("#sprite", "tint",  vmath.vector4(1, 0, 0, 1))
-			ActiveKeyboard = false
+			ActiveKeyboard1 = false
+			ActiveKeyboard2 = false
+			ActiveKeyboard3 = false
 			label.set_text("#label", "GO TO THE\n SHOOTING ZONE" )
-		elseif action.released then
+		if action.released then
 			go.set("#sprite", "tint",  vmath.vector4(1, 1, 1, 1))
-			ActiveKeyboard = true
+			ActiveKeyboard1 = true
+			ActiveKeyboard2 = true
+			ActiveKeyboard3 = true
 			label.set_text("#label", "" )
 		end
 	end

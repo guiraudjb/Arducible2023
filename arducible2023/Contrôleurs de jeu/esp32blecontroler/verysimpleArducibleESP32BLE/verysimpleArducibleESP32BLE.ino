@@ -19,6 +19,8 @@ void loop() {
     if(digitalRead(Cible1)){
     bleKeyboard.press('e');
     delay(100);
+    }
+    else{
     bleKeyboard.release('e');
     delay(100);
     }
@@ -26,6 +28,7 @@ void loop() {
     if(digitalRead(Cible2)){
     bleKeyboard.press('r');
     delay(100);
+    }else{
     bleKeyboard.release('r');
     delay(100);
     }
@@ -33,6 +36,8 @@ void loop() {
     if(digitalRead(Cible3)){
     bleKeyboard.press('t');
     delay(100);
+    }
+    else{
     bleKeyboard.release('t');
     delay(100);
       }
