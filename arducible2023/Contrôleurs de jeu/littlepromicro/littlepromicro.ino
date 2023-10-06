@@ -12,41 +12,40 @@ void setup() {
   Keyboard.begin();
 delay(3000);  
 }
-
+ertteerrrttt
 
 
 void loop(){
     if(digitalRead(b1)) {
-        Keyboard.release(KEY_RIGHT_ARROW); 
-    delay(100);
+    Keyboard.release(KEY_RIGHT_ARROW); 
+    //delay(100);
     } else {
         Keyboard.press(KEY_RIGHT_ARROW);
-    delay(100);
+    //delay(100);
     }
     
 
     if(digitalRead(Cible1)) {
        Keyboard.press('e');  
-    delay(100);  
+    //delay(100);  
     } else {
     Keyboard.release('e');
-    delay(100);
+    //delay(100);
     }
     
     if(digitalRead(Cible2)) {
         Keyboard.press('r');
-        delay(100);
+      //  delay(100);
     } else {
         Keyboard.release('r');
-        delay(100); 
+       // delay(100); 
     }
     if(digitalRead(Cible3)) {
         Keyboard.press('t');
-        delay(100);
+        //delay(100);
     } else {
         Keyboard.release('t');
-        delay(100);
+        //delay(100);
     }
-
-  
+ 
 }
