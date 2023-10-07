@@ -1,11 +1,5 @@
 
-‘Œ#version 140
-#ifndef GL_ES
-#define lowp
-#define mediump
-#define highp
-#endif
-
+ÓÎ#version 300 es
 uniform highp mat4 view_proj;
 
 
@@ -15,6 +9,24 @@ in lowp vec4 color;
 
 out mediump vec2 var_texcoord0;
 out lowp vec4 var_color;
+
+void main()
+{
+    var_texcoord0 = texcoord0;
+    var_color = vec4(color.rgb * color.a, color.a);
+    gl_Position = view_proj * vec4(position.xyz, 1.0);
+}
+
+ùôprecision mediump float;
+uniform highp mat4 view_proj;
+
+
+attribute mediump vec4 position;
+attribute mediump vec2 texcoord0;
+attribute lowp vec4 color;
+
+varying mediump vec2 var_texcoord0;
+varying lowp vec4 var_color;
 
 void main()
 {

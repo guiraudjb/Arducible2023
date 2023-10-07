@@ -8,7 +8,7 @@ function on_input(self, action_id, action)
 			ActiveKeyboard1 = false
 			ActiveKeyboard2 = false
 			if action.released then --TEST 3
-				ActiveKeyboard3 = true
+				ActiveKeyboard3 = false
 				if ActiveBonusPos == 3 then --TEST 4
 					if bonusHitted == 0 then
 						bonusHitted=1
