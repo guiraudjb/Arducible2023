@@ -1,5 +1,6 @@
 function init(self)
-	self.timeLeft=5
+	sound.play("VoiceSound#ReadyToGo")
+	self.timeLeft=6
 	finalScore=0
 	level=0
 	score=0

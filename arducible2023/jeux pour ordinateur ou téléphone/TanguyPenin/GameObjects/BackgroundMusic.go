@@ -4,7 +4,7 @@ embedded_components {
   data: "sound: \"/assets/Sounds/musique.ogg\"\n"
   "looping: 1\n"
   "group: \"master\"\n"
-  "gain: 0.5\n"
+  "gain: 0.4\n"
   "pan: 0.0\n"
   "speed: 1.0\n"
   "loopcount: 0\n"
