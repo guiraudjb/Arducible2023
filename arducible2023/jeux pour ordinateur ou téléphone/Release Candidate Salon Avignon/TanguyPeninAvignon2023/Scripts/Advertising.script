@@ -7,7 +7,10 @@ function init(self)
 	bonusHitted=0
 	oldLevel=-1
 	posInLevel = 1
-	
+	ActiveKeyboard=true
+	ActiveKeyboard1=true
+	ActiveKeyboard2=true
+	ActiveKeyboard3=true
 end
 
 function update(self, dt)

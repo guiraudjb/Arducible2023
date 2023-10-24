@@ -184,7 +184,7 @@ instances {
   prototype: "/GameObjects/Bonus1.go"
   position {
     x: 500.0
-    y: 400.0
+    y: 200.0
     z: 0.0
   }
   rotation {

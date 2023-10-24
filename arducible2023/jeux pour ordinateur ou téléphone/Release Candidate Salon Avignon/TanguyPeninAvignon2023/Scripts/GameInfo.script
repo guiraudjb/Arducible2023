@@ -1,6 +1,6 @@
 function init(self)
 	sound.play("VoiceSound#Intro")
-	self.timeLeft=30
+	self.timeLeft=3
 end
 
 function update(self, dt)
