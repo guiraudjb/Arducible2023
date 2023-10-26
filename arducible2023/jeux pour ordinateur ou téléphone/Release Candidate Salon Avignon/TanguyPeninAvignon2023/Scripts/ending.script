@@ -1,5 +1,8 @@
 function init(self)
 	self.timeLeft=10
+	ActiveKeyboard1=true
+	ActiveKeyboard2=true
+	ActiveKeyboard3=true
 	level=0
 	label.set_text("EndingMessage#label2", string.format("%.1f", tostring(finalScore)))
 	
