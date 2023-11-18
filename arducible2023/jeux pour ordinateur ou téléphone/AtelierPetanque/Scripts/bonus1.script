@@ -1,6 +1,7 @@
 function init(self)
 	animationPlaying=false
-
+	--variable rotation bonus
+	angleBonus = 0
 end
 function final(self)
 end
@@ -64,41 +65,27 @@ end
 function rollingBonus(ActiveBonusPos)
 
 	local bonuspos = go.get_position()
-	local offset=610*(ActiveBonusPos-1)
-	local deplacement=5
-	local maxx=500+offset
-	local minx=200+offset
-	local deltax=(maxx-minx)/2
-	local deltay=100
-	local valy=200
+	local offsetx=610*(ActiveBonusPos-1)+350
+	local offsety=400
+	local deplacement=3
+	local rayonx=100
+	local rayony=40
+	local zoonBonus
+	local zoominitial = 1.5
+	local zoomvariation = rayony / rayonx
 
-	if bonuspos.x >= maxx then
-		bonuspos.x = maxx
-		bonuspos.z=0
-			print("invert!")
-		direction=-1
-	
-	end
+	--augmentation de l'angle
+	angleBonus = angleBonus + deplacement
+	--limitation à 360
+	angleBonus = math.fmod(angleBonus, 360)
+	--print ("angle : ",angleBonus)
+	--calcul des valeurs de position du bonuspos
+	bonuspos.x = math.cos(angleBonus * math.pi / 180 ) * rayonx + offsetx
+	bonuspos.y = math.sin(angleBonus * math.pi / 180 ) * rayony + offsety
 
-	if bonuspos.x <= minx then
-		bonuspos.x = minx
-		bonuspos.z=1
-		print("invert!")
-		direction= 1
+	--calcul du zoom
+	zoomBonus = zoominitial + math.sin(angleBonus * math.pi / 180 ) * zoomvariation
 
-	end
-
-	relx = (maxx - bonuspos.x - deltax)/deltax
-	rely =  math.sqrt(1-( relx * relx))
-	
-	bonuspos.x = bonuspos.x + direction*(deplacement-2*rely+0.1)
-
-	print("posx") 
-	print(bonuspos.x)
-	print(relx)
-	
-	bonuspos.y = valy + (rely* deltay) * direction
-	go.set_scale(0.5+(rely/3))
-	
+	go.set_scale(zoomBonus)
 	go.set_position(bonuspos)
 end
