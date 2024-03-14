@@ -11,12 +11,12 @@ void setup() {
   pinMode(Cible1, INPUT);
   pinMode(Cible2, INPUT);
   pinMode(Cible3, INPUT);
-  pinMode(LED_BUILTIN, OUTPUT);
+  pinMode(13, OUTPUT);
   bleKeyboard.begin();
 }
 
 void loop() {
-    digitalWrite(LED_BUILTIN, LOW); 
+    digitalWrite(13, HIGH); 
   if (bleKeyboard.isConnected()) {
     if (digitalRead(Cible1)) {
       bleKeyboard.press('e');
