@@ -11,37 +11,35 @@ void setup() {
   pinMode(Cible1, INPUT);
   pinMode(Cible2, INPUT);
   pinMode(Cible3, INPUT);
-  pinMode(13, OUTPUT);
   bleKeyboard.begin();
 }
 
 void loop() {
-    digitalWrite(13, HIGH); 
   if (bleKeyboard.isConnected()) {
     if (digitalRead(Cible1)) {
       bleKeyboard.press('e');
-      delay(100);
+//      delay(100);
     }
     else {
       bleKeyboard.release('e');
-      delay(100);
+  //    delay(100);
     }
 
     if (digitalRead(Cible2)) {
       bleKeyboard.press('r');
-      delay(100);
+    //  delay(100);
     } else {
       bleKeyboard.release('r');
-      delay(100);
+     // delay(100);
     }
 
     if (digitalRead(Cible3)) {
       bleKeyboard.press('t');
-      delay(100);
+      //delay(100);
     }
     else {
       bleKeyboard.release('t');
-      delay(100);
+      //delay(100);
     }
 
   }
