@@ -1,16 +1,14 @@
 #include <Keyboard.h>
 const int b1 = 10;
-const int Cible1 = 14;   
-const int Cible2 = 15;   
+const int Cible1 = 15;   
+const int Cible2 = 14;   
 const int Cible3 = 16;
-const int CapteurChoc = 8;
 
 void setup() {                
   pinMode(b1, INPUT_PULLUP);
   pinMode(Cible1,INPUT);
   pinMode(Cible2,INPUT); 
   pinMode(Cible3,INPUT); 
-  //pinMode(CapteurChoc, INPUT);
   Keyboard.begin();
 delay(3000);  
 }
@@ -24,15 +22,6 @@ void loop(){
         Keyboard.press(KEY_RIGHT_ARROW);
     //delay(100);
     }
-
-    //if(digitalRead(CapteurChoc)) {
-    //  Keyboard.press('f');
-    //delay(100);
-    //} else {
-    //  Keyboard.release('f');
-    //delay(100);
-    //}
-    
 
     if(digitalRead(Cible1)) {
        Keyboard.press('e');  

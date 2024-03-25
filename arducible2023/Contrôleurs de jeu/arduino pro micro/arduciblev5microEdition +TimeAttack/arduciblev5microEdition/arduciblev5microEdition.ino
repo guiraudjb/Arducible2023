@@ -22,7 +22,7 @@ bool statusCible2;
 bool statusCible3;
 bool timeAttack = false;
 int Score=0;
-int GameTimer = 120;
+int GameTimer = 60;
 int currentMillis=0;
 int previousMillis=0;
 
@@ -213,6 +213,7 @@ void setup() {
     randomSeed(analogRead(0)); //lier la génération de nombre aléatoire au port analogique 1
 	  
    couleurAleatoire();
+
    credit();
    soundHit();
 
@@ -238,6 +239,7 @@ void loop()
     InitGame();
     if (nbJoueurs == 5) {
       timeAttack = true;
+      cibleAleatoire();
     }
     else{
       timeAttack = false;
@@ -246,6 +248,7 @@ void loop()
     
   if (partieEnCours==true){
     if (timeAttack == true){
+
       timeAttackMode();
     }
     else{
@@ -306,6 +309,8 @@ void InitGame(){
     pointBonus[i] =0;
     oldClassement[i] = 0;
     classement[i] = 0;
+    GameTimer=60;
+    Score=0;
   }
  
   
@@ -1042,16 +1047,22 @@ Keyboard.end();
 
 void timeAttackMode()
 {
+    pixels.setPixelColor(cibleEnCours+reserveLedCible, pixels.Color(0, intensiteLed, 0));
+    pixels.show();   // Mise a jour de la couleur des leds. 
     currentMillis = millis();
 if (currentMillis - previousMillis > 1000){
     previousMillis=currentMillis;
     currentMillis = millis();
     GameTimer = GameTimer - 1;
-    Score =Score + 1; 
+    //Score =Score + 1; 
     AffichageTimer();
 }
 if (GameTimer <= 0){
   Ending();
+  partieFinie = false;
+  partieEnCours = false;
+  initialisation = true;
+  oldNbJoueurs = 0;
 }
   
   if (digitalRead(cible1)){
@@ -1179,6 +1190,7 @@ if (cibleTouchee==cibleEnCours){
   soundHit();
   GameTimer=GameTimer+5;
   Score=Score+1;
+  cibleAleatoire();
   AffichageTimer();
   pixels.clear();
   pixels.show();
@@ -1190,25 +1202,11 @@ if (cibleTouchee==cibleEnCours){
 else
 {
   GameTimer=GameTimer-1;
-  Score=Score-1;
+  //Score=Score-1;
   soundMiss();
   AffichageTimer();
 
 }
-}
-
-void RunNewGame(){
-cibleAleatoire();
-
-GameTimer=120;
-Score=0;
-  getReady();
-  pixels.clear();
-  pixels.show();
-  pixels.setPixelColor(cibleEnCours+reserveLedCible, pixels.Color(0, intensiteLed, 0));
-
-  pixels.show();   // Mise a jour de la couleur des leds. 
-  previousMillis=millis();
 }
 
 void getReady(){
