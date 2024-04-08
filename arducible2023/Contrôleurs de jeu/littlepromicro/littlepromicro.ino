@@ -1,7 +1,7 @@
 #include <Keyboard.h>
 const int b1 = 10;
-const int Cible1 = 14;   
-const int Cible2 = 15;   
+const int Cible1 = 15;   
+const int Cible2 = 14;   
 const int Cible3 = 16;
 const int CapteurChoc = 8;
 
