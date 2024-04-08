@@ -28,6 +28,7 @@ immersive_mode = 1
 title = Simpliest Atelier Petanque Shooting
 publisher = guiraudjb
 developer = guiraudjb
+version = 1.1
 
 [engine]
 fixed_update_frequency = 30

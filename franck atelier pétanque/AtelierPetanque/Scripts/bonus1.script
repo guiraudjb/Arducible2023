@@ -68,10 +68,10 @@ function rollingBonus(ActiveBonusPos)
 	local offsetx=610*(ActiveBonusPos-1)+350
 	local offsety=400
 	local deplacement=3
-	local rayonx=100
+	local rayonx=180
 	local rayony=40
 	local zoonBonus
-	local zoominitial = 1.5
+	local zoominitial = 1
 	local zoomvariation = rayony / rayonx
 
 	--augmentation de l'angle
@@ -83,6 +83,8 @@ function rollingBonus(ActiveBonusPos)
 	bonuspos.x = math.cos(angleBonus * math.pi / 180 ) * rayonx + offsetx
 	bonuspos.y = math.sin(angleBonus * math.pi / 180 ) * rayony + offsety
 
+	
+	
 	--calcul du zoom
 	zoomBonus = zoominitial + math.sin(angleBonus * math.pi / 180 ) * zoomvariation
 

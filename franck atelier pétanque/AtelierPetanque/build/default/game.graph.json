@@ -33,8 +33,8 @@
   "children" : [ "/main/level.collectionc" ]
 }, {
   "path" : "/main/level.collectionc",
-  "hexDigest" : "260bf027fe5dc4cb7ba38dcea2b7acac7b133a1f",
-  "children" : [ "/main/Background.goc", "/main/engine.goc", "/GameObjects/HitSound.goc", "/main/Cible1.goc", "/main/Cible2.goc", "/main/Cible3.goc", "/GameObjects/labels/LevelLabel.goc", "/GameObjects/labels/ScoreLabel.goc", "/GameObjects/labels/TimeLeftLabel.goc", "/main/Bonus1.goc" ]
+  "hexDigest" : "3879a9493f7a36477d3541e891a01ceef486d620",
+  "children" : [ "/main/Background.goc", "/main/engine.goc", "/GameObjects/HitSound.goc", "/main/Cible1.goc", "/main/Cible2.goc", "/main/Cible3.goc", "/GameObjects/labels/LevelLabel.goc", "/GameObjects/labels/ScoreLabel.goc", "/GameObjects/labels/TimeLeftLabel.goc", "/main/Bonus1.goc", "/GameObjects/VoiceSound.goc" ]
 }, {
   "path" : "/main/Background.goc",
   "hexDigest" : "bbc56fc7c42d8302db8793ab254cd0ef5e06c3c6",
@@ -49,7 +49,7 @@
   "children" : [ "/builtins/materials/sprite.materialc", "/assets/background.a.texturesetc" ]
 }, {
   "path" : "/builtins/materials/sprite.materialc",
-  "hexDigest" : "e6ffbeabbd193ffb55a44adb2aabfcd00e87f24c",
+  "hexDigest" : "f5df0b3fa81237df4d3e54ee3d8c9b23d84516fb",
   "children" : [ "/builtins/materials/sprite.vpc", "/builtins/materials/sprite.fpc" ]
 }, {
   "path" : "/builtins/materials/sprite.vpc",
@@ -61,7 +61,7 @@
   "children" : [ ]
 }, {
   "path" : "/assets/background.a.texturesetc",
-  "hexDigest" : "34eaa85cd6090f1acdac83d73218343c7ea68294",
+  "hexDigest" : "eae31516fe7f5a84108ee579f7c6deaefbb6128f",
   "children" : [ "/assets/background.texturec" ]
 }, {
   "path" : "/assets/background.texturec",
@@ -81,7 +81,7 @@
   "children" : [ "/builtins/materials/sprite.materialc", "/assets/GameSprites.a.texturesetc" ]
 }, {
   "path" : "/assets/GameSprites.a.texturesetc",
-  "hexDigest" : "efb65368232179a5b896a9dcf2630cee8cea8eb9",
+  "hexDigest" : "c38de07eda8b89537edccd7d2ff511140ff7719c",
   "children" : [ "/assets/GameSprites.texturec" ]
 }, {
   "path" : "/assets/GameSprites.texturec",
@@ -117,8 +117,8 @@
   "children" : [ ]
 }, {
   "path" : "/main/Cible1.goc",
-  "hexDigest" : "24e2d021618550fab9f62fbc8aebca0738a669aa",
-  "children" : [ "/Scripts/cible1.scriptc", "/_generated_469df5f405dc424f.spritec", "/_generated_d024e2c54aaea408.soundc" ]
+  "hexDigest" : "8396c2cc37bd7a3f29de3c7159c6ad97333533c7",
+  "children" : [ "/Scripts/cible1.scriptc", "/_generated_469df5f405dc424f.spritec" ]
 }, {
   "path" : "/Scripts/cible1.scriptc",
   "hexDigest" : "a971c457f3a5ac3d418b2e1405b0c5c21367ab31",
@@ -213,7 +213,91 @@
   "children" : [ "/Scripts/bonus1.scriptc", "/_generated_2abf46afb76975d.spritec" ]
 }, {
   "path" : "/Scripts/bonus1.scriptc",
-  "hexDigest" : "27d5d2237536f1a6fe657a7f8769687cc0fd55b3",
+  "hexDigest" : "7884a77ca56c39ee251e84d86ddba43895a0e9c8",
+  "children" : [ ]
+}, {
+  "path" : "/GameObjects/VoiceSound.goc",
+  "hexDigest" : "3e3eb94fd6d6807cf6d344a9ed7c124e71ea3292",
+  "children" : [ "/_generated_153febca49841cd7.soundc", "/_generated_8228a4300c1028ec.soundc", "/_generated_620f41d4a59a3a5c.soundc", "/_generated_939189a77055b444.soundc", "/_generated_b2dd365e0482bde.soundc", "/_generated_7dd79e70008ce46c.soundc", "/_generated_eb49b1cf6a8836c.soundc", "/_generated_d17e573c5ee1cc3b.soundc", "/_generated_903c0e3a59c2e9c.soundc", "/_generated_ffe51c95021a9f56.soundc" ]
+}, {
+  "path" : "/_generated_153febca49841cd7.soundc",
+  "hexDigest" : "ca2ce6c256cd102a6b7acb60cb40ca0bda5d5eca",
+  "children" : [ "/assets/Sounds/VoicesAI/readytogo.wavc" ]
+}, {
+  "path" : "/assets/Sounds/VoicesAI/readytogo.wavc",
+  "hexDigest" : "ff9379646a17c47ea59d04f16d5bf44a6fae01b4",
+  "children" : [ ]
+}, {
+  "path" : "/_generated_8228a4300c1028ec.soundc",
+  "hexDigest" : "c6c8f715684e8bee1ba7c3b16b4b4b71cc313352",
+  "children" : [ "/assets/Sounds/VoicesAI/go.wavc" ]
+}, {
+  "path" : "/assets/Sounds/VoicesAI/go.wavc",
+  "hexDigest" : "4ab3faafed5708368bf4474cadf928b2f0bb2784",
+  "children" : [ ]
+}, {
+  "path" : "/_generated_620f41d4a59a3a5c.soundc",
+  "hexDigest" : "759aa6beabf06b5a2d3558966c0b1ca66725e0e8",
+  "children" : [ "/assets/Sounds/VoicesAI/pasmal.wavc" ]
+}, {
+  "path" : "/assets/Sounds/VoicesAI/pasmal.wavc",
+  "hexDigest" : "5c03a2d615b7185c20b8b74a5bde1ba267c6c959",
+  "children" : [ ]
+}, {
+  "path" : "/_generated_939189a77055b444.soundc",
+  "hexDigest" : "4943db60dfdc1ef5b47e9270dfbca2f391cc5412",
+  "children" : [ "/assets/Sounds/VoicesAI/bravo.wavc" ]
+}, {
+  "path" : "/assets/Sounds/VoicesAI/bravo.wavc",
+  "hexDigest" : "5a30f9156f32335fccfa50cd2a449cdeb01079ac",
+  "children" : [ ]
+}, {
+  "path" : "/_generated_b2dd365e0482bde.soundc",
+  "hexDigest" : "9be133a203e7d6e310738e1dd8daab6c25d0a2bd",
+  "children" : [ "/assets/Sounds/VoicesAI/super.wavc" ]
+}, {
+  "path" : "/assets/Sounds/VoicesAI/super.wavc",
+  "hexDigest" : "04741bd1aca9882bc7ed557ca3c7d1a4998c5706",
+  "children" : [ ]
+}, {
+  "path" : "/_generated_7dd79e70008ce46c.soundc",
+  "hexDigest" : "ae48a45a9451772b774c4c38bb1d38bba6b3c681",
+  "children" : [ "/assets/Sounds/VoicesAI/excellent.wavc" ]
+}, {
+  "path" : "/assets/Sounds/VoicesAI/excellent.wavc",
+  "hexDigest" : "64bf7df19b25a33b8374344fd89d86e7533c76f2",
+  "children" : [ ]
+}, {
+  "path" : "/_generated_eb49b1cf6a8836c.soundc",
+  "hexDigest" : "05f1fedd9be889ce528d61cc88b4085822bbe723",
+  "children" : [ "/assets/Sounds/VoicesAI/gauche.wavc" ]
+}, {
+  "path" : "/assets/Sounds/VoicesAI/gauche.wavc",
+  "hexDigest" : "b905fd7e0346457b488538fa8e8d50f3bb66f2b1",
+  "children" : [ ]
+}, {
+  "path" : "/_generated_d17e573c5ee1cc3b.soundc",
+  "hexDigest" : "807bf63d11fadd75614f4afdd7e386f15f4a802e",
+  "children" : [ "/assets/Sounds/VoicesAI/centre.wavc" ]
+}, {
+  "path" : "/assets/Sounds/VoicesAI/centre.wavc",
+  "hexDigest" : "04486d592580eb4642a9cba83ed8e2490d102d94",
+  "children" : [ ]
+}, {
+  "path" : "/_generated_903c0e3a59c2e9c.soundc",
+  "hexDigest" : "88de12d7ae3a25898de74245e1cde72c1971ad27",
+  "children" : [ "/assets/Sounds/VoicesAI/droite.wavc" ]
+}, {
+  "path" : "/assets/Sounds/VoicesAI/droite.wavc",
+  "hexDigest" : "018080f7fdd9af126e5f8e60136622f0f902fbe2",
+  "children" : [ ]
+}, {
+  "path" : "/_generated_ffe51c95021a9f56.soundc",
+  "hexDigest" : "af21a1ffc12a59b8d728d4629b3784871b502c68",
+  "children" : [ "/assets/Sounds/VoicesAI/génial.wavc" ]
+}, {
+  "path" : "/assets/Sounds/VoicesAI/génial.wavc",
+  "hexDigest" : "84cc2e539d11eaaed947a6f03d58dd0734a9ee60",
   "children" : [ ]
 }, {
   "path" : "/_generated_590919c278274b1a.collectionproxyc",
@@ -396,11 +480,11 @@
   "children" : [ "/builtins/scripts/edn.luac", "/builtins/scripts/mobdebug.luac" ]
 }, {
   "path" : "/builtins/scripts/edn.luac",
-  "hexDigest" : "4550912a94b1f069f34c57480fe92b0b59658ae4",
+  "hexDigest" : "988d2076ccf81ec152a0fb829af981996512876b",
   "children" : [ ]
 }, {
   "path" : "/builtins/scripts/mobdebug.luac",
-  "hexDigest" : "758cc91498d94cf0e22a8666fbee2a4367e79690",
+  "hexDigest" : "c60ee3cc8c2d91c822ef2ce20c4566b99d6b218f",
   "children" : [ "/builtins/scripts/socket.luac", "/builtins/scripts/edn.luac" ]
 }, {
   "path" : "/builtins/scripts/socket.luac",
