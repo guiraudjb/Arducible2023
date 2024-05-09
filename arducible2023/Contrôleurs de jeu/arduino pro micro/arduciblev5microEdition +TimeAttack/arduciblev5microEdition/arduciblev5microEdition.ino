@@ -1129,8 +1129,12 @@ void Ending(){
   
   lcd.setCursor(0,0);
   lcd.print(F("FINAL SCORE"));
-  String scorestring = String(GameTimer+Score);
+  String scorestring = String(Score);
+  Serial.println(Score);
+  Serial.println(scorestring);
+  Serial.println(scorestring.length());
     if (scorestring.length()==3){
+      Serial.println(3);
       String centaine = String(scorestring.charAt(0));
       printBigNum(centaine.toInt(), 0, 1);
       String decimale = String(scorestring.charAt(1));
@@ -1139,26 +1143,17 @@ void Ending(){
       printBigNum(unite.toInt(), 6, 1);
     }
     else if (scorestring.length()==2){
+      Serial.println(2);
       String decimale = String(scorestring.charAt(0));
       printBigNum(decimale.toInt(), 3, 1);
       String unite = String(scorestring.charAt(1));
       printBigNum(unite.toInt(), 6, 1);
     }
     else{
+      Serial.println(1);
       String unite = String(scorestring.charAt(0));
-      printBigNum(0, 8, 1);
-      printBigNum(unite.toInt(), 3, 1);
+      printBigNum(unite.toInt(), 6, 1);
     }
-lcd.setCursor(0,3);
-    lcd.print(F("Points : "));
-    lcd.setCursor(9,3);
-    lcd.print(Score);
-
-lcd.setCursor(0,0);
-    lcd.print(F("Temps restant : "));
-    lcd.setCursor(16,0);
-    lcd.print(GameTimer);
-    
     
   delay(20000);
     lcd.clear();
