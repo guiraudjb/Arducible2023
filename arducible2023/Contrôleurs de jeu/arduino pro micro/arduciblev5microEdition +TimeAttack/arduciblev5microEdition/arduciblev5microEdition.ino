@@ -248,8 +248,7 @@ void loop()
     
   if (partieEnCours==true){
     if (timeAttack == true){
-
-      timeAttackMode();
+		timeAttackMode();
     }
     else{
         trtPartieEnCours();
@@ -258,8 +257,6 @@ void loop()
   
   if ( partieFinie==true ){trtPartieFinie();}
 } 
-
-
 
 void GererInterruption()
 {
@@ -344,7 +341,7 @@ void InitGame(){
     }
 }
 
-  
+
 void trtPartieEnCours(){
     cibleAleatoire();
     EcranWait();
@@ -468,15 +465,11 @@ void extraBall(){
     }
 }
 
-  
-
-
 void testKiller(){
   if (killer[joueurEnCours] == 1){
     EcranSansFautes();
   }
 }
-
 
 void triclassement(){
 //***********************************************************************************************
@@ -507,8 +500,6 @@ classement[5]=5;
 //*******************************************************************************************************   
 }
 
-
-
 void ScoresStringFin(){
  tabScores[0]=(" 1ER : J" + String(classement[1])+ " SCORE " + String(scores[classement[1]]));
  tabScores[1]=(" 2EM : J" + String(classement[2])+ " SCORE " + String(scores[classement[2]]));
@@ -516,8 +507,6 @@ void ScoresStringFin(){
  tabScores[3]=(" 4EM : J"  + String(classement[4])+ " SCORE " + String(scores[classement[4]]));
  tabScores[4]=(" 5EM : J" + String(classement[5])+ " SCORE " + String(scores[classement[5]]));
 }
-
-
 
 void AfficheFin(){
   
@@ -818,9 +807,8 @@ void EcranMiss()
   printBigNum(30, 15, 1);
 }
 
-
 void EcranEnJeu()
-  {
+{
   pixels.setPixelColor(reserveLedCible+cibleEnCours, pixels.Color(0, 0, 255));
   pixels.show();   // Mise a jour de la couleur des leds.  
   lcd.clear();
@@ -854,7 +842,6 @@ void EcranEnJeu()
     }
    
 }
-
 
 void EcranScores(){
   lcd.clear();
@@ -918,9 +905,6 @@ void EcranFinScores(int a){
  lcd.print(F("                OK"));
 }
 
-
-
-
 void soundHit(){
   tone(Buzzer,988,125);
   delay(125);
@@ -952,10 +936,6 @@ void soundReadyToShot(){
   delay(100);
   noTone(Buzzer);
 }
-
-
-
-
 
 void afficherMoniteurSerie(){
   Serial.println("Status boutonG" + String(statusBoutonG) +" Status boutonD" + String(statusBoutonD) + " Status cible1 " + String(statusCible1) + " Status cible2 " + String(statusCible2) + " Status cible3 " + String(statusCible3));
@@ -994,9 +974,9 @@ void credit(){
 void UsbPCGameControler(){
   lcd.clear();
   lcd.setCursor(0,0);
-  lcd.print(F("USB PC CONTROLER"));
+  lcd.print(F(" USB KEYB CONTROLER"));
   lcd.setCursor(0,1);
-  lcd.print(F("CONNECTED"));
+  lcd.print(F("  VIDEO GAME MODE"));
   lcd.setCursor(0,2);
   lcd.print(F("PRESS BT 1 & 2"));
   lcd.setCursor(0,3);
@@ -1042,6 +1022,7 @@ while (digitalRead(boutonG) || digitalRead(boutonD)){
         pixels.show(); 
     }
 }
+Keyboard.releaseAll();
 Keyboard.end();
 }
 
@@ -1132,7 +1113,7 @@ void AffichageTimer(){
  
 }
 
-  void Ending(){
+void Ending(){
   lcd.clear();
   pixels.clear();
   pixels.show();
